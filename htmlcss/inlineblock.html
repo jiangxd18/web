@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inline-block、CSS-reset</title>
+    <style>
+        /*以下为css-reset部分*/
+        body{
+            margin: 0;
+        }
+        a{text-decoration: none}
+        /*以下为样式*/
+        #div2{
+            background: #e8e8e8;
+            width: 600px;
+            height: 80px;
+            margin:60px auto;
+            text-align: center;
+            line-height: 80px;
+        }
+       a{
+            text-decoration: none;
+            background: #ffffff;
+            display: inline-block;
+            height: 28px;
+            border: 1px solid #cdcdcd;
+            line-height: 28px;
+            padding: 0 8px;
+            font-size: 12px;
+            color: #333333;
+        }
+       a:hover{border: 1px solid red; color: red}
+       #active{
+           background: #fcf9ea;
+           color: #333333;
+           font-weight: bold;
+           cursor: text;
+           border: 1px solid #cdcdcd ;
+       }
+       /* .div1{
+            display: inline-block;
+            margin:0 20px;
+        }
+        .a1{
+            text-decoration: none;
+        }
+        .a1:link{color: black ;}
+        .a1:visited{color: black;}
+        .a1:hover{color: red ; text-decoration: underline ;}
+        .a1:active{color: red;text-decoration: underline;}*/
+
+
+    </style>
+</head>
+<body>
+ <!--   <div class="div1">
+        <ol>
+            <li><a href="#" class="a1">有序列表项</a></li>
+            <li><a href="#" class="a1">有序列表项</a></li>
+            <li><a href="#" class="a1">有序列表项</a></li>
+            <li><a href="#" class="a1">有序列表项</a></li>
+            <li><a href="#" class="a1">有序列表项</a></li>
+        </ol>
+    </div>
+    <div class="div1">
+        <ul>
+            <li>无序列表项</li>
+            <li>无序列表项</li>
+            <li>无序列表项</li>
+            <li>无序列表项</li>
+            <li>无序列表项</li>
+        </ul>
+    </div>
+    <div class="div1">
+        <dl>
+            <dt>有标题列表标题</dt>
+            <dd>标题列表项</dd>
+            <dd>标题列表项</dd>
+            <dd>标题列表项</dd>
+            <dd>标题列表项</dd>
+            <dd>标题列表项</dd>
+        </dl>
+    </div> -->
+    <div id="div2">
+        <a href="#">上一页</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#" id="active">3</a>
+        <a href="#">4</a>
+        <a href="#">25</a>
+        <a href="#">266...</a>
+        <a href="#">下一页</a>
+    </div>
+
+</body>
+</html>

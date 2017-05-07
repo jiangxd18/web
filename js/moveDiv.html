@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字移动</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+        }
+    </style>
+    <script src="myJS.js" type="text/javascript"></script>
+    <script>
+        window.onload = function () {
+            var oBox = document.getElementById('box');
+            document.onmousemove = function (ev) {   //以时间间隔为标准 , 如果与上一次的位置有发生改变 那么就会触发一次
+                ev = ev || event;
+                var top = document.documentElement.scrollTop || document.body.scrollTop;
+                var left = document.documentElement.scrollLeft || document.body.scrollLeft;
+
+                oBox.style.top = ev.clientY + left +'px';
+                oBox.style.left  = ev.clientX + top + 'px';
+            }
+
+        };
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

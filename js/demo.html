@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery-2.2.2.js" type="text/javascript"></script>
+    <script>
+        window.onload = function () {
+            var oBtn1 = document.getElementById('total');
+            var oBtn2 = document.getElementById('reverse');
+            var ul = document.getElementsByTagName('ul')[0];
+            var check = ul.getElementsByTagName('input');
+
+            oBtn1.onclick = function () {
+              for(var i = 0 ; i < check.length ; ++i){
+                  check[i].checked = true;
+              }
+            };
+
+            oBtn2.onclick = function () {
+              for(var i = 0 ; i < check.length ; ++i) {
+                  check[i].checked = !check[i].checked;
+              }
+            };
+        };
+    </script>
+</head>
+<body>
+
+    <input type="button" value="全选" id="total"/>
+    <input type="button" value="反选" id="reverse"/>
+
+    <ul>
+        <li><input type="checkbox"/>basketball</li>
+        <li><input type="checkbox"/>volleyball</li>
+        <li><input type="checkbox"/>tennis</li>
+        <li><input type="checkbox"/>football</li>
+    </ul>
+</body>
+</html>

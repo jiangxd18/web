@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查找替换</title>
+    <style>
+        body{margin: 0; padding: 0; background: darkgray;}
+        #letter{
+            width: 400px;
+            background: white;
+            padding: 10px;
+            margin: 20px auto;
+            border: 2px solid orangered;
+        }
+        #choose{
+            width: 420px;
+            margin: 3px auto;
+            border: 5px solid orangered;
+            background: palevioletred;
+            font-size: 0;
+            padding: 10px;
+        }
+        .btn{
+            display: inline-block;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .btn:hover{
+            cursor: pointer;
+        }
+        #line{
+            border: 1px solid orangered;
+        }
+        .txt{
+
+            margin: 8px 0 0 0 ;
+            height: 25px;
+        }
+        #find{
+           margin: 0 0 0 8px;
+            width: 60px;
+            height: 30px;
+        }
+        #findbox{
+
+        }
+        #switch{
+            display: none;
+        }
+        #change{
+            margin: 0 3px 0 3px;
+            width: 60px;
+            height: 30px;
+        }
+        #btn1{
+            background: orangered;
+            color: white;
+        }
+        span{
+            background: yellow;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var btn1 = document.getElementById('btn1');
+            var btn2 = document.getElementById('btn2');
+            var findbox = document.getElementById('findbox');
+            var switchbox = document.getElementById('switch');
+            var find = document.getElementById('find');
+            var change = document.getElementById('change');
+            var letter = document.getElementById('letter');
+            var find_txt = document.getElementById('find_txt');
+            var front = document.getElementById('front');
+            var after = document.getElementById('after');
+
+            btn1.onclick = function () {
+                btn1.style.background = 'orangered';
+                btn1.style.color = 'white';
+                btn2.style.background = 'none';
+                btn2.style.color = 'none';
+                findbox.style.display = 'block';
+                switchbox.style.display = 'none';
+            };
+            btn2.onclick = function () {
+                btn1.style.background = 'none';
+                btn1.style.color = 'none';
+                btn2.style.background = 'orangered';
+                btn2.style.color = 'white';
+                findbox.style.display = 'none';
+                switchbox.style.display = 'block';
+            };
+
+            find.onclick = function () {
+                var str = letter.innerHTML;
+                if(find_txt.value == '') alert("查找内容不能为空");
+                else{
+                    if(str.indexOf(find_txt.value ,0) == -1) alert('查找内容没有找到');
+                    else {
+                        str = str.split('<span>').join('').split('</span>').join('');
+                        letter.innerHTML = str.split(find_txt.value).join('<span>' + find_txt.value + '</span>');
+                    }
+                }
+            };
+            change.onclick = function () {
+                var str = letter.innerHTML;
+                if(front.value == '' || after.value == '') alert('文本不能为空');
+                else {
+                    if (str.indexOf(front.value) == -1) alert('无法查找到替换内容');
+                    else {
+                        str = str.split('<span>').join('').split('</span>').join('');
+                        letter.innerHTML = str.split(front.value).join('<span>' + after.value + '</span>');
+                    }
+                }
+
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="box">
+        <div id="letter">
+            超级文本标记语言文档制作不是很复杂，但功能强大，支持不同数据格式的文件镶入，这也是万维网（WWW）盛行的原因之一，其主要特点如下：简易性：超级文本标记语言版本升级采用超集方式，从而更加灵活方便。可扩展性：超级文本标记语言的广泛应用带来了加强功能，增加标识符等要求，超级文本标记语言采取子类元素的方式，为系统扩展带来保证。平台无关性：虽然个人计算机大行其道，但使用MAC等其他机器的大有人在，超级文本标记语言可以使用在广泛的平台上，这也是万维网（WWW）盛行的另一个原因。通用性：另外，HTML是网络的通用语言,一种简单、通用的全置标记语言。它允许网页制作人建立文本与图片相结合的复杂页面，这些页面可以被网上任何其他人浏览到，无论使用的是什么类型的电脑或浏览器。
+        </div>
+        <div id="choose">
+            <div class="btn choosed" id="btn1">查找</div>
+            <div class="btn" id="btn2">替换</div>
+            <hr id="line"/>
+            <div id="findbox">
+                <input type="text" class="txt" id="find_txt"/>
+                <input type="button" value="查找" id="find">
+            </div>
+            <div id="switch">
+                <input type="text" class="txt" id="front">
+                <input type="button" id="change" value="替换">
+                <input type="text" class="txt" id="after">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

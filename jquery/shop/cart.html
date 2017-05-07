@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车实例</title>
+    <!--清默认CSS样式-->
+    <link href="css/cssReset.css" rel="stylesheet" type="text/css"/>
+    <!--布局样式-->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.2.min.js" type="text/javascript"></script>
+    <script src="js/cart.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <!--蒙版层和图片展示-->
+    <div id="filter"></div>
+    <div id="show_img">
+        <div id="show">
+            <div class="arrow">
+                <img src="img/arrow2.png" id="left"/>
+            </div>
+            <img id="main" src="" alt="">
+            <div class="arrow">
+                <img src="img/arrow.png" id="right"/>
+            </div>
+        </div>
+        <div id="aside">
+            <span class="product_name">VANS CLASSIC SLIP-ON</span>
+            <span class="product_type">VANS SHOE</span>
+            <strong>SIZES</strong>
+            <span class="size">38 38_1/2 39 39_1/2 </span>
+            <strong>COLORS</strong>
+
+            <div class="colors">
+                <div class="c-blue"><span></span></div>
+                <div class="c-red"><span></span></div>
+                <div class="c-black"><span></span></div>
+                <div class="c-green"><span></span></div>
+            </div>  <!--colors-->
+        </div>
+    </div>
+
+    <div id="wrapper">  <!--整体布局开始-->
+
+        <div id="sidebar">  <!--侧栏购物车布局开始-->
+
+            <!--以下两个div用来实现购物车图标-->
+            <div class="cart-icon-top">
+            </div>
+            <div class="cart-icon-bottom">
+            </div>
+
+
+            <h3>CART</h3>
+            <div id="cart">  <!--购物车显示部分-->
+                <span class="empty">No items in cart now.</span>
+            </div> <!--购物车显示部分-->
+            <!--预留结算按钮,之后往后布局-->
+            <div id="final">
+                <div id="total">TOTAL:$100</div>
+                <div id="checkout">CHECKOUT</div>
+            </div>
+        </div> <!--侧栏购物车布局结束-->
+
+        <div id="grid"> <!--商品展示布局开始-->
+
+            <h1><i>VANS <span>SERIES</span></i></h1>
+
+            <!--商品1开始布局-->
+            <div class="product">
+
+                <!--商品布局-->
+                <div class="make3D">
+
+                    <!--进网页就看见的布局-->
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <img src="img/10.jpg" alt=""/>
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">Add to cart</div>
+                        <div class="view_gallery">View detail</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$89</span>
+                                <span class="product_name">VANS CLASSIC SLIP-ON</span>
+                                <p>VANS SHOE</p>
+
+                                <div class="product-options">
+                                    <strong>SIZES</strong>
+                                    <span>38 38_1/2 39 39_1/2 40 41 42</span>
+                                    <strong>COLORS</strong>
+
+                                    <div class="colors">
+                                        <div class="c-blue"><span></span></div>
+                                        <div class="c-red"><span></span></div>
+                                        <div class="c-black"><span></span></div>
+                                        <div class="c-green"><span></span></div>
+                                    </div>  <!--colors-->
+                                <!--options-->
+                                </div>
+                            </div> <!--stats-container-->
+                        </div><!--stats-->
+                    </div><!--product-front-->
+
+
+                    <div class="product-hint">
+
+                    </div>
+                </div>  <!--make3D-->
+            </div>  <!--商品1布局结束-->
+
+            <!--2-->
+            <div class="product">
+
+                <!--商品布局-->
+                <div class="make3D">
+
+                    <!--进网页就看见的布局-->
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <img src="img/20.jpg" alt=""/>
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">Add to cart</div>
+                        <div class="view_gallery">View detail</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$99</span>
+                                <span class="product_name">VANS U OLD SKOOL</span>
+                                <p>VANS SHOE</p>
+
+                                <div class="product-options">
+                                    <strong>SIZES</strong>
+                                    <span>38 38_1/2 39 39_1/2 40 41 42</span>
+                                    <strong>COLORS</strong>
+
+                                    <div class="colors">
+                                        <div class="c-blue"><span></span></div>
+                                        <div class="c-red"><span></span></div>
+                                        <div class="c-black"><span></span></div>
+                                        <div class="c-green"><span></span></div>
+                                    </div>  <!--colors-->
+                                    <!--options-->
+                                </div>
+                            </div> <!--stats-container-->
+                        </div><!--stats-->
+                    </div><!--product-front-->
+                    <div class="product-hint">
+
+                    </div>
+                </div>  <!--make3D-->
+            </div>  <!--商品2布局结束-->
+
+            <!--3-->
+            <div class="product">
+
+                <!--商品布局-->
+                <div class="make3D">
+
+                    <!--进网页就看见的布局-->
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <img src="img/30.jpg" alt=""/>
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">Add to cart</div>
+                        <div class="view_gallery">View detail</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$155</span>
+                                <span class="product_name">VANS U SLIP-ON 59 CUP+</span>
+                                <p>VANS SHOE</p>
+
+                                <div class="product-options">
+                                    <strong>SIZES</strong>
+                                    <span>38 38_1/2 39 39_1/2 40 41 42</span>
+                                    <strong>COLORS</strong>
+
+                                    <div class="colors">
+                                        <div class="c-blue"><span></span></div>
+                                        <div class="c-red"><span></span></div>
+                                        <div class="c-black"><span></span></div>
+                                        <div class="c-green"><span></span></div>
+                                    </div>  <!--colors-->
+                                    <!--options-->
+                                </div>
+                            </div> <!--stats-container-->
+                        </div><!--stats-->
+                    </div><!--product-front-->
+                    <div class="product-hint">
+
+                    </div>
+                </div>  <!--make3D-->
+            </div>  <!--商品3布局结束-->
+
+            <!--4-->
+            <div class="product">
+
+
+                <!--商品布局-->
+                <div class="make3D">
+
+                    <!--进网页就看见的布局-->
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <img src="img/40.jpg" alt=""/>
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">Add to cart</div>
+                        <div class="view_gallery">View detail</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$102</span>
+                                <span class="product_name">VANS SK8-HI REI</span>
+                                <p>VANS SHOE</p>
+
+                                <div class="product-options">
+                                    <strong>SIZES</strong>
+                                    <span>38 38_1/2 39 39_1/2 40 41 42</span>
+                                    <strong>COLORS</strong>
+
+                                    <div class="colors">
+                                        <div class="c-blue"><span></span></div>
+                                        <div class="c-red"><span></span></div>
+                                        <div class="c-black"><span></span></div>
+                                        <div class="c-green"><span></span></div>
+                                    </div>  <!--colors-->
+                                    <!--options-->
+                                </div>
+                            </div> <!--stats-container-->
+                        </div><!--stats-->
+                    </div><!--product-front-->
+                    <div class="product-hint">
+
+                    </div>
+                </div>  <!--make3D-->
+            </div>  <!--商品4布局结束-->
+
+            <!--5-->
+            <div class="product">
+
+                <!--商品布局-->
+                <div class="make3D">
+
+                    <!--进网页就看见的布局-->
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <img src="img/50.jpg" alt=""/>
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">Add to cart</div>
+                        <div class="view_gallery">View detail</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$199</span>
+                                <span class="product_name">VANS U ERA+</span>
+                                <p>VANS SHOE</p>
+
+                                <div class="product-options">
+                                    <strong>SIZES</strong>
+                                    <span>38 38_1/2 39 39_1/2 40 41 42</span>
+                                    <strong>COLORS</strong>
+
+                                    <div class="colors">
+                                        <div class="c-blue"><span></span></div>
+                                        <div class="c-red"><span></span></div>
+                                        <div class="c-black"><span></span></div>
+                                        <div class="c-green"><span></span></div>
+                                    </div>  <!--colors-->
+                                    <!--options-->
+                                </div>
+                            </div> <!--stats-container-->
+                        </div><!--stats-->
+                    </div><!--product-front-->
+                    <div class="product-hint">
+
+                    </div>
+                </div>  <!--make3D-->
+            </div>  <!--商品5布局结束-->
+
+            <!--6-->
+            <div class="product">
+
+                <!--商品布局-->
+                <div class="make3D">
+
+                    <!--进网页就看见的布局-->
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <img src="img/60.jpg" alt=""/>
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">Add to cart</div>
+                        <div class="view_gallery">View detail</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$75</span>
+                                <span class="product_name">VANS U MTE CA</span>
+                                <p>VANS SHOE</p>
+
+                                <div class="product-options">
+                                    <strong>SIZES</strong>
+                                    <span>38 38_1/2 39 39_1/2 40 41 42</span>
+                                    <strong>COLORS</strong>
+
+                                    <div class="colors">
+                                        <div class="c-blue"><span></span></div>
+                                        <div class="c-red"><span></span></div>
+                                        <div class="c-black"><span></span></div>
+                                        <div class="c-green"><span></span></div>
+                                    </div>  <!--colors-->
+                                    <!--options-->
+                                </div>
+                            </div> <!--stats-container-->
+                        </div><!--stats-->
+                    </div><!--product-front-->
+                    <div class="product-hint">
+
+                    </div>
+                </div>  <!--make3D-->
+            </div>  <!--商品6布局结束-->
+
+            <!--7-->
+            <div class="product">
+                <!--商品布局-->
+                <div class="make3D">
+
+                    <!--进网页就看见的布局-->
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <img src="img/70.jpg" alt=""/>
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">Add to cart</div>
+                        <div class="view_gallery">View detail</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$107</span>
+                                <span class="product_name">VANS U MSE</span>
+                                <p>VANS SHOE</p>
+
+                                <div class="product-options">
+                                    <strong>SIZES</strong>
+                                    <span>38 38_1/2 39 39_1/2 40 41 42</span>
+                                    <strong>COLORS</strong>
+
+                                    <div class="colors">
+                                        <div class="c-blue"><span></span></div>
+                                        <div class="c-red"><span></span></div>
+                                        <div class="c-black"><span></span></div>
+                                        <div class="c-green"><span></span></div>
+                                    </div>  <!--colors-->
+                                    <!--options-->
+                                </div>
+                            </div> <!--stats-container-->
+                        </div><!--stats-->
+                    </div><!--product-front-->
+                    <div class="product-hint">
+
+                    </div>
+                </div>  <!--make3D-->
+            </div>  <!--商品7布局结束-->
+
+            <!--8-->
+            <div class="product">
+                <!--商品布局-->
+                <div class="make3D">
+
+                    <!--进网页就看见的布局-->
+                    <div class="product-front">
+                        <div class="shadow"></div>
+                        <img src="img/80.jpg" alt=""/>
+                        <div class="image_overlay"></div>
+                        <div class="add_to_cart">Add to cart</div>
+                        <div class="view_gallery">View detail</div>
+                        <div class="stats">
+                            <div class="stats-container">
+                                <span class="product_price">$88</span>
+                                <span class="product_name">VANS U MTE HIKER</span>
+                                <p>VANS SHOE</p>
+
+                                <div class="product-options">
+                                    <strong>SIZES</strong>
+                                    <span>38 38_1/2 39 39_1/2 40 41 42</span>
+                                    <strong>COLORS</strong>
+
+                                    <div class="colors">
+                                        <div class="c-blue"><span></span></div>
+                                        <div class="c-red"><span></span></div>
+                                        <div class="c-black"><span></span></div>
+                                        <div class="c-green"><span></span></div>
+                                    </div>  <!--colors-->
+                                    <!--options-->
+                                </div>
+                            </div> <!--stats-container-->
+                        </div><!--stats-->
+                    </div><!--product-front-->
+                    <div class="product-hint">
+
+                    </div>
+                </div>  <!--make3D-->
+            </div>  <!--商品8布局结束-->
+
+
+        </div>  <!--商品展示布局结束-->
+
+    </div> <!--整体布局结束-->
+
+  <!----加载--->
+    <div class="load">
+        <img src="img/10.jpg"/>
+        <img src="img/11.jpg"/>
+        <img src="img/12.jpg"/>
+        <img src="img/20.jpg"/>
+        <img src="img/21.jpg"/>
+        <img src="img/22.jpg"/>
+        <img src="img/30.jpg"/>
+        <img src="img/31.jpg"/>
+        <img src="img/32.jpg"/>
+        <img src="img/40.jpg"/>
+        <img src="img/41.jpg"/>
+        <img src="img/42.jpg"/>
+        <img src="img/50.jpg"/>
+        <img src="img/51.jpg"/>
+        <img src="img/52.jpg"/>
+        <img src="img/60.jpg"/>
+        <img src="img/61.jpg"/>
+        <img src="img/62.jpg"/>
+        <img src="img/70.jpg"/>
+        <img src="img/71.jpg"/>
+        <img src="img/72.jpg"/>
+        <img src="img/80.jpg"/>
+        <img src="img/81.jpg"/>
+        <img src="img/82.jpg"/>
+        <img src="img/delete-item.png">
+    </div>
+
+
+</body>
+</html>

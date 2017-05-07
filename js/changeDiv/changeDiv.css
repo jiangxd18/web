@@ -1,0 +1,80 @@
+body,html{width: 100% ;height:100%}
+
+span{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.span2{
+    font-size: 15px;
+    font-weight: normal;
+}
+#set{
+    border: none;
+    background: red;
+    width: 100px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+#show{
+    border:5px solid gray;
+    background: azure;
+    width: 100px;
+    height: 100px;
+}
+#filter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    filter: alpha(opacity:30);
+    display: none;
+}
+
+#win{
+    border: 2px solid gray;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    line-height: 50px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -125px;
+    background: white;
+}
+.num{
+    border: none;
+    background: lightgray;
+    width: 40px;
+    height:40px;
+    color: gray;
+    text-align: center;
+}
+.btn2{
+    border: none;
+    width: 80px;
+    height: 40px;
+    background: dodgerblue;
+    margin: 10px 10px;
+    color: white;
+}
+#red{
+    background: palevioletred;
+    color: white;
+}
+#blue{
+    background: cornflowerblue;
+    color: white;
+}
+#green{
+    background: greenyellow;
+    color: white;
+}

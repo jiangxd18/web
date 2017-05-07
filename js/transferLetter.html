@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字移动</title>
+    <style>
+        #box{
+            border: 3px solid gray;
+            padding: 20px;
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        #left,#right{
+            width: 400px;
+            height:250px;
+            border: 1px solid grey;
+        }
+        #middle{
+            display: inline-block;
+        }
+
+        .p{
+            width: 8px;
+            height: 15px;
+            display: inline-block;
+            background: orangered;
+        }
+        #process{
+            opacity: 0;
+            transition: all 2s ease-out;
+            -webkit-transition: all 2s ease-out;
+            -o-transition: all 2s ease-out;
+            -moz-transition: all 2s ease-out;
+        }
+        #letter{
+            width: 80px;
+            text-align: center;
+        }
+    </style>
+    <script src="myJS.js" type="text/javascript"></script>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById('btn');
+            var pro = document.getElementById('process');
+            var p = pro.getElementsByTagName('div');
+            var left = document.getElementById('left');
+            var right = document.getElementById('right');
+            var letter = document.getElementById('letter');
+            var now = 0;
+            var pre = 0;
+            left.value = 'HTML3.0规范是由当时刚成立的W3C于1995年3月提出，提供了很多新的特性，例如表格、文字绕排和复杂数学元素的显示。虽然它是被设计用来兼容2.0版本的，但是实现这个标准的工作在当时过于复杂，在草案于1995年9月过期时，标准开发也因为缺乏浏览器支持而中止了。3.1版从未被正式提出，而下一个被提出的版本是开发代号为Wilbur的HTML 3.2，去掉了大部分3.0中的新特性，但是加入了很多特定浏览器，例如Netscape和Mosaic的元素和属性。HTML对数学公式的支持最后成为另外一个标准MathML。';
+
+
+            oBtn.onclick = function () {
+                var length = left.value.length;
+                var rightStr = '';
+                var num = 0;
+                var timer = setInterval(function () {
+                    p[pre].style.background = 'orangered';
+                    p[now].style.background = 'yellow';
+                    pre = now;
+                    now = (++now) % 7;
+                },100);
+                pro.style.opacity = 1;
+                this.disabled = 'disabled';
+                right.disabled = true;
+
+                var timer2 = setInterval(function () {
+                    rightStr += left.value[0];
+                    var arr = left.value.split('');
+                    arr.splice(0,1);
+                    left.value = arr.join('');
+                    right.value = rightStr;
+                    num++;
+                    letter.innerHTML = num  + '/' + length;
+                    if(num == length){
+                        pro.style.opacity = 0;
+                        clearInterval(timer);
+                        clearInterval(timer2);
+                        oBtn.disabled = false;
+                    }
+                },100);
+            };
+        };
+    </script>
+</head>
+<body>
+    <div id="box">
+        <textarea id="left"></textarea>
+        <div id="middle">
+            <input type="button" value="文字右移" name="" id="btn"/>
+            <p id="letter">/</p>
+            <div id="process">
+                <div class="p"></div>
+                <div class="p"></div>
+                <div class="p"></div>
+                <div class="p"></div>
+                <div class="p"></div>
+                <div class="p"></div>
+                <div class="p"></div>
+            </div>
+        </div>
+        <textarea id="right"></textarea>
+    </div>
+</body>
+</html>

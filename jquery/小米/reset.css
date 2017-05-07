@@ -1,0 +1,4 @@
+body,ul,div,li,a,span,p,h1,h2,h3,h4,h5,h6{margin:0 ; padding: 0;}
+body{font:14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;}
+a{text-decoration: none;}
+ul,li{list-style: none;}

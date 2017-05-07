@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度搜索框</title>
+    <style>
+        #input{
+            width: 300px;
+            height: 20px;
+            padding: 5px;
+            border: 1px solid #f90;
+        }
+        ul{
+            border: 1px solid #f90;
+            width: 310px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: none;
+        }
+        li a{
+            display: block;
+            width: 310px;
+            text-decoration: none;
+            font-size: 17px;
+            line-height: 30px;
+            color: black;
+            text-indent: 10px;
+            text-wrap: none;
+
+        }
+        li a:hover{
+            background: #f90;
+            color: white;
+        }
+    </style>
+    <script>
+        function getData(data){
+            var oUl = document.getElementsByTagName('ul')[0];
+            oUl.innerHTML = '';
+
+            if(data.s.length){
+                for(var i = 0; i < data.s.length ; ++i){
+                    var oLi = document.createElement('li');
+                    var oA = document.createElement('a');
+
+                    oA.innerHTML = data.s[i];
+                    oA.href = "http://www.baidu.com/s?wd=" + data.s[i];
+                    oA.target = '_blank';
+
+                    oLi.appendChild(oA);
+                    oUl.appendChild(oLi);
+                }
+                oUl.style.display = 'block';
+            }
+            else oUl.style.display  = 'none';
+
+        }
+
+
+        window.onload = function () {
+            var input = document.getElementById('input');
+            var oUl = document.getElementsByTagName('ul')[0];
+
+
+            input.onfocus = function () {
+                if(this.value){
+                    ajax();
+                }
+            };
+
+            input.onkeyup = function () {
+                if(this.value)
+                    ajax();
+                else oUl.style.display = 'none';
+            };
+
+            function ajax() {
+                var oScript = document.createElement('script');
+                oScript.src = "http://suggestion.baidu.com/su?wd=" + encodeURI(input.value) + "&cb=getData";
+                document.body.appendChild(oScript);
+            }
+
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="input"/>
+    <ul>
+    </ul>
+</body>
+</html>
