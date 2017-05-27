@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--viewport是网页默认的宽度和高度，上面这行代码的意思是，
+    网页宽度默认等于屏幕宽度（width=device-width），原始缩放比例（initial-scale=1）为1.0，
+    即网页初始大小占屏幕面积的100%-->
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>flex_nav</title>
+    <style>
+        body,html,ul{margin: 0;padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;color:orange;}
+        span{font-style: italic;color: orangered;}
+        ul{
+            display: flex;
+            display: -webkit-flex; /* Safari */
+            flex-direction: row; /*主轴方向*/
+            flex-wrap: wrap; /*充满后自动换行*/
+            width: 600px;
+        }
+        ul li{
+            width: 200px;
+            text-align: center;
+        }
+        #content{
+            width: 605px;
+            border:1px solid red;
+            margin: 50px auto;
+        }
+        #btn{
+            width: 150px;
+            height: 30px;
+            border: 1px solid orange;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 4px;
+            color: orangered;
+            margin: 10px auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <ul>
+            <li class="item"><a href="javascript:;">佳能</a><span>(304440)</span></li>
+            <li class="item"><a href="javascript:;">索尼</a><span>(304441)</span></li>
+            <li class="item"><a href="javascript:;">三星</a><span>(304442)</span></li>
+            <li class="item"><a href="javascript:;">尼康</a><span>(304443)</span></li>
+            <li class="item"><a href="javascript:;">松下</a><span>(304444)</span></li>
+            <li class="item"><a href="javascript:;">卡西欧</a><span>(304445)</span></li>
+            <li class="item"><a href="javascript:;">富士</a><span>(304446)</span></li>
+            <li class="item"><a href="javascript:;">柯达</a><span>(304447)</span></li>
+            <li class="item"><a href="javascript:;">宾得</a><span>(304448)</span></li>
+            <li class="item"><a href="javascript:;">理光</a><span>(304449)</span></li>
+            <li class="item"><a href="javascript:;">奥林巴斯</a><span>(304450)</span></li>
+            <li class="item"><a href="javascript:;">明基</a><span>(304451)</span></li>
+            <li class="item"><a href="javascript:;">爱国者</a><span>(304452)</span></li>
+            <li class="item"><a href="javascript:;">其他品牌</a><span>(304453)</span></li>
+        </ul>
+        <div id="btn">精简显示品牌</div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+<script>
+    $(function() {
+        var $category = $('ul li:gt(5):not(:last)');
+        $('#btn').hover(function () {
+            $(this).css({'border':'1px solid red'});
+        },function () {
+            $(this).css({'border':'1px solid orange'})
+        }).click(function () {
+            if($(this).text() == '精简显示品牌'){
+                $category.hide();
+                $(this).text('全部显示品牌');
+            }
+            else{
+                $category.show();
+                $(this).text('精简显示品牌');
+            }
+        });
+    })
+</script>
+</html>
