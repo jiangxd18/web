@@ -1,0 +1,89 @@
+/*css reset*/
+body,html,ul{
+    margin: 0;
+    padding: 0;
+}
+/*css 1296db*/
+body{
+    background: rgba(0,0,0,0.2);
+}
+table{
+    border-top: 3px solid #1296db;
+    margin: 0 auto;
+}
+td{
+    width: 140px;
+}
+.name{
+    background: lightskyblue;
+    font-weight: bold;
+}
+#content{
+    background: white;
+    width: 420px;
+    height: 500px;
+    position: relative;
+    margin: 50px auto 50px auto;
+    border-radius: 20px;
+}
+#fliter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 420px;
+    height: 500px;
+    z-index: 2;
+    background: white;
+    border-radius: 20px;
+    display: none;
+}
+#loadimg{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+#key{
+    margin: 15px;
+    height: 25px;
+    width: 180px;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+    padding-left: 5px;
+}
+#key:focus{
+    border: 2px solid #1296db;
+}
+#btn{
+    height: 30px;
+    width: 90px;
+    border: 1px solid lightgray;
+    background: #1296db;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+/*css3 动画*/
+@keyframes rotate{
+    from{
+        -webkit-transform: rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+    }
+}
+.rotate{
+    animation: rotate 2s linear infinite;
+    -webkit-animation:rotate 2s linear infinite;
+}

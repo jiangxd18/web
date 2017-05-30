@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <link href="table.css" rel="stylesheet" type="text/css"/>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div id="content">
+        <input type="text" id="key" placeholder="模糊查询员工姓名"/>
+        <input type="button" id="btn" value="搜索"/>
+        <table>
+        <thead>
+            <tr><th>姓名</th><th>性别</th><th>暂住地</th></tr>
+        </thead>
+        <tbody>
+            <tr class="name"><td colspan="3">前端设计组</td></tr>
+            <tr><td class="em">张三</td><td>男</td><td>浙江宁波</td></tr>
+            <tr><td class="em">李四</td><td>男</td><td>浙江杭州</td></tr>
+            <tr><td class="em">Liberter</td><td>男</td><td>江苏南京</td></tr>
+
+            <tr class="name"><td colspan="3">前端开发组</td></tr>
+            <tr><td class="em">john</td><td>男</td><td>浙江宁波</td></tr>
+            <tr><td class="em">小张</td><td>女</td><td>浙江杭州</td></tr>
+            <tr><td class="em">马铃薯</td><td>男</td><td>西安</td></tr>
+
+            <tr class="name"><td colspan="3">后端开发组</td></tr>
+            <tr><td class="em">sara</td><td>男</td><td>浙江宁波</td></tr>
+            <tr><td class="em">mike</td><td>男</td><td>浙江杭州</td></tr>
+            <tr><td class="em">小平</td><td>男</td><td>江苏南京</td></tr>
+        </tbody>
+    </table>
+        <div id="fliter">
+            <img id="loadimg" src="load.png" alt=""/>
+        </div>
+    </div>
+</body>
+<script src="jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="table.js" type="text/javascript"></script>
+</html>
