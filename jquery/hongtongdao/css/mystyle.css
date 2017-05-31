@@ -1,0 +1,448 @@
+/**reset部分**/
+*{
+    font-family: 'Microsoft YaHei' !important;
+    outline: none;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3.h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+input[type=text],input[type=button]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+/**公共通用部分CSS**/
+@font-face {font-family: 'iconfont';
+    src: url('../iconfont/iconfont.eot'); /* IE9*/
+    src: url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+i{
+    position: absolute;right: 0.3rem;top: 0.4rem; color: lightgrey;
+}
+
+.pic{
+    position: absolute;
+    right: 0;
+}
+.clearfloat{
+    zoom: 1;
+}
+.clearfloat:after{
+    overflow: hidden;
+    clear: both;
+    content: '';
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*css正文*/
+
+/**注册界面CSS**/
+.myRegister,.myLogin,.myForget,.channel,.myCompany,.myApp{
+    width: 9.9rem;
+    margin: 0 auto;
+}
+.myRegister_title,.myLogin_title,.myForget_title,.channel_title,.myCompany_title,.myCompany_title{
+    width: 9rem;
+    height: 2.2rem;
+    margin: 0 auto 0.4rem auto;
+    font-size: 1rem;
+    line-height: 2.2rem;
+    border-bottom: 1px solid lightgrey;
+    color: rgb(38,38,38);
+}
+.myRegister_tel,.myRegister_mail,.myRegister_name,.myRegister_secret,.myRegister_secret2,.myRegister_message
+,.myLogin_user,.myLogin_secret,.myForget_user,.myForget_message,.myCompany_content,.myApp_content,.myForget_secret,.myForget_secret2,.myRegister_message_pic,.myForget_message_pic{
+    width: 9rem;
+    height: 2.3rem;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+.myRegister_tel .myRegister_tel_letter,.myRegister_mail_letter,.myRegister_name_letter,.myRegister_secret_letter,
+.myRegister_secret2_letter,.myRegister_message_letter,.myLogin_user_letter,.myLogin_secret_letter,.myForget_user_letter
+,.myForget_message_letter,.myForget_secret_letter,.myForget_secret2_letter,.myRegister_pic_letter,.myForget_pic_letter{
+    font-size: 0.4rem;
+    color: rgb(38,38,38);
+    float: left;
+    margin-top: 0.6rem;
+    width: 1.7rem;
+}
+.myRegister_tel input,.myRegister_mail input,.myRegister_name input,.myRegister_secret input,.myRegister_secret2 input,
+.myLogin_user input,.myLogin_secret input,.myForget_user input,.myForget_secret input,.myForget_secret2 input{
+    width: 7rem;
+    border: 1px solid lightgrey;
+    padding: 0;
+    background: white;
+    height: 1.2rem;
+    text-align: left;
+    text-indent: 1em;
+    font-size: 0.4rem;
+    color: rgb(38,38,38);
+}
+.myRegister_tel .myRegister_tel_warn,.myRegister_mail .myRegister_mail_warn,.myRegister_name .myRegister_name_warn
+,.myRegister_secret_warn,.myRegister_secret2_warn,.myRegister_message_warn,.myLogin_user_warn,.myLogin_secret_warn
+,.myForget_user_warn,.myForget_secret_warn,.myForget_secret2_warn,.myRegister_pic_warn,.myForget_pic_warn{
+    width: 9rem;
+    height: 0.5rem;
+    color: red;
+    font-size: 0.4rem;
+    display: block;
+    margin-top: 0.1rem;
+}
+.myRegister_message .myRegister_message_input,.myForget_message .myForget_message_input,.myRegister_pic_input,.myForget_pic_input{
+    width: 4rem;
+    border: 1px solid lightgrey;
+    padding: 0;
+    background: white;
+    height: 1.2rem;
+    text-align: left;
+    text-indent: 1em;
+    font-size: 0.4rem;
+    color: rgb(38,38,38);
+}
+.myRegister_message_btn,.myForget_message_btn{
+    float: right;
+    width: 3rem;
+    border: 1px solid #f64850;
+    padding: 0;
+    background: #f64850;
+    height: 1.3rem;
+    text-align: center;
+    line-height: 1.3rem;
+    font-size:0.4rem;
+    color:white;
+    margin-left: -0.2rem;
+    margin-top: 0.18rem;
+}
+.myRegister_btn{
+    width: 7rem;
+    border:1px solid #f64850;
+    padding: 0;
+    background:#f64850;
+    height: 1.2rem;
+    text-align: center;
+    line-height: 1.3rem;
+    font-size: 0.4rem;
+    color: white;
+    margin-left: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+/*登录界面的CSS*/
+.myLogin_forget{
+    display: block;
+    color: gray;
+    text-decoration: none;
+    font-size: 0.43rem;
+    margin-left:2.2rem;
+    width: 3rem;
+    margin-top: -0.2rem;
+    height: 0.5rem;
+}
+.myLogin_forget:hover{
+    color: #f64850;
+}
+#myLogin_remember{
+    display: inline-block;
+    float: left;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-left: 2.2rem;
+    margin-top: 0.5rem;
+}
+.myLogin_remember_letter{
+    display: block;
+    font-size: 0.43rem;
+    color: rgb(38,38,38);
+    float: left;
+    margin-top: 0.42rem;
+}
+.myLogin_btn{
+    width: 7rem;
+    border:1px solid #f64850;
+    padding: 0;
+    background:#f64850;
+    height: 1.2rem;
+    text-align: center;
+    line-height: 1.3rem;
+    font-size: 0.4rem;
+    color: white;
+    margin-left: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+/*忘记密码界面的CSS*/
+.myForget_btn{
+    width: 8rem;
+    border:1px solid #f64850;
+    padding: 0;
+    background:#f64850;
+    height: 1.2rem;
+    text-align: center;
+    line-height: 1.3rem;
+    font-size: 0.4rem;
+    color: white;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+/**渠道推广CSS**/
+
+.channel_name_letter , .channel_type_letter,.channel_team_letter,.channel_core_letter ,.channel_place_letter,
+.enterprise_core_letter{
+    display: inline-block;
+    font-size: 0.4rem;
+    color: rgb(38,38,38);
+    margin-top: 0.6rem;
+    width: 2rem;
+    float: left;
+    font-weight: bold;
+}
+.channel_name,.channel_type , .channel_team,.channel_resource,.channel_core_resource,.channel_experience
+,.channel_place,.enterprise_experience,.enterprise_introduction{
+    width: 9.5rem;
+    height: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+.channel_name input,.channel_core_resource input ,.channel_place input{
+    width: 7rem;
+    border: 1px solid lightgrey;
+    padding: 0;
+    background: white;
+    height: 1.1rem;
+    text-align: left;
+    text-indent: 1em;
+    font-size: 0.4rem;
+    color: rgb(38,38,38);
+}
+.channel_wrapInput,.enterprise_wrapInput{
+    width: 7rem;
+    float: left;
+    text-align: left;
+}
+.channel_wrapInput label,.enterprise_wrapInput label{
+    font-size: 0.37rem;
+    color: rgb(38,38,38);
+    float: left;
+    display: inline-block;
+    margin-top: 0.61rem;
+    margin-right: 0.8rem;
+}
+.channel_wrapInput input,.enterprise_wrapInput input{
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    float: left;
+    margin-top: 0.61rem;
+    color: #f64850;
+}
+.channel_experience textarea,.enterprise_experience textarea,.enterprise_introduction textarea{
+    width: 7rem;
+    border: 1px solid lightgrey;
+    padding: 0;
+    background: white;
+    height: 3rem;
+    text-align: left;
+    text-indent: 1em;
+    font-size: 0.4rem;
+    color: rgb(38,38,38);
+    margin-top: 0.5rem;
+}
+.channel_btn{
+    width: 8rem;
+    border:1px solid #f64850;
+    padding: 0;
+    background:#f64850;
+    height: 1.2rem;
+    text-align: center;
+    line-height: 1.3rem;
+    font-size: 0.4rem;
+    color: white;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/**初创企业和成型企业的CSS**/
+.enterprise{
+    width: 9.9rem;
+    margin: 0 auto;
+}
+.enterprise_title_wrap{
+    width: 9rem;
+    height: 2.2rem;
+    margin: 0 auto 0.4rem auto;
+    font-size: 1rem;
+    line-height: 2.2rem;
+    border-bottom: 1px solid lightgrey;
+    color: rgb(38,38,38);
+}
+.enterprise_title1,.enterprise_title2{
+    display: inline-block;
+    font-size: 0.65rem;
+}
+.enterprise_title_active{
+    font-size: 0.8rem;
+    color: #f64850;
+}
+.enterprise_name,.enterprise_link,.enterprise_type,.enterprise_place,.enterprise_level,.enterprise_prepay,
+.initial_enterprise_place,.initial_enterprise_name,.initial_enterprise_type,.initial_enterprise_lun
+,.enterprise_product_pic{
+    width: 9.5rem;
+    height: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+.enterprise_name_letter,.enterprise_link_letter,.enterprise_type_letter,.enterprise_place_letter,.enterprise_level_letter
+,.enterprise_prepay_letter,.initial_enterprise_place_letter,.initial_enterprise_name_letter,.initial_enterprise_type_letter{
+    display: inline-block;
+    font-size: 0.4rem;
+    color: rgb(38,38,38);
+    margin-top: 0.6rem;
+    width: 2rem;
+    float: left;
+    font-weight: bold;
+}
+.enterprise_name input,.enterprise_link input,.enterprise_place input,.enterprise_prepay input
+,.initial_enterprise_place input,.initial_enterprise_name input{
+    width: 7rem;
+    border: 1px solid lightgrey;
+    padding: 0;
+    background: white;
+    height: 1.1rem;
+    text-align: left;
+    text-indent: 1em;
+    font-size: 0.4rem;
+    color: rgb(38,38,38);
+}
+.enterprise_level label{
+    font-size: 0.35rem;
+    color: rgb(38,38,38);
+    margin-right: 0.2rem;
+}
+.enterprise_level input{
+    border: 1px solid lightgrey;
+    width:1.7rem;
+    height: 0.6rem;
+    text-indent: 0.3em;
+    font-size: 0.35rem;
+}
+.mature_btn,.initial_btn{
+    margin-left: 2.3rem;
+    margin-bottom: 1rem;
+}
+.mature_cancle,.mature_sure,.initial_cancle,.initial_sure{
+    background: #f64850;
+    color: white;
+    width: 2.7rem;
+    height: 1.2rem;
+    border: 1px solid #f64850;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-right: 0.5rem;
+    font-size: 0.4rem;
+}
+.show_path{
+
+    width: 5rem;
+    border: 1px solid lightgrey;
+    padding: 0;
+    margin: 0;
+    background: white;
+    height: 1rem;
+    text-align: left;
+    font-size: 0.4rem;
+    color: rgb(38,38,38);
+}
+
+.enterprise_choose,.enterprise_transfer{
+    width: 1.9rem;
+    height: 1rem;
+    border: 1px solid #f64850;
+    background: #f64850;
+    color: white;
+    font-size: 0.4rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 5px;
+}
+.enterprise_transfer{
+    margin-left: -2rem;
+}
+.progress{
+    color: rgb(38,38,38);
+    font-size: 0.4rem;
+}
+.mature_warn,.initial_warn,.channel_warn{
+    font-size: 0.4rem;
+    color: red;
+    display: block;
+    margin: 0 auto;
+    width: 8rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/**公司简介页面CSS**/
+.myCompany_content h3,.myApp_content h3{
+    font-size: 0.75rem;
+
+}
+.myCompany_content p,.myApp_content p{
+    font-size: 0.4rem;
+    color:rgb(115,115,115);
+    text-align: left;
+    text-indent: 2em;
+}
+.myCompany img{
+    width: 8rem;
+    height: 6rem;
+    display: block;
+    margin: 0.2rem auto 0.2rem auto;
+}
+
+/**app简介**/
+.myApp_show{
+    width: 9rem;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+}
+.myApp_show img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1.5rem;
+}
+.myApp_show div{
+    width: 6.75rem;
+    background: url("../images/800/xing1.png") no-repeat;
+    background-size: 100% 100%;
+    font-size: 0.4rem;
+    color:rgb(115,115,115);
+    margin: 0 auto;
+    padding: 1rem 0.5rem 0.8rem 0.5rem;
+    text-indent: 2em;
+    line-height: 0.55rem;
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宏通道注册</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,width=device-width">
+    <link href="css/mystyle.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-1.12.3.js" type="text/javascript"></script>
+    <script src="js/myJs.js" type="text/javascript"></script>
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize = window.screen.width / 10 + 'px';
+    </script>
+</head>
+<body>
+    <div class="myRegister">
+        <h2 class="myRegister_title">注册</h2>
+        <div class="myRegister_tel">
+            <span class="myRegister_tel_letter">手机号</span>
+            <input type="text" placeholder="请填写11位手机号"/>
+            <span class="myRegister_tel_warn warn"></span>
+            <i class="iconfont" style="font-size: 0.7rem;">&#xe600;</i>
+        </div>
+
+        <div class="myRegister_mail">
+            <span class="myRegister_mail_letter">邮箱</span>
+            <input type="text" placeholder="请填写邮箱"/>
+            <span class="myRegister_mail_warn warn"></span>
+            <i class="iconfont" style="font-size: 0.7rem">&#xe602;</i>
+        </div>
+        <div class="myRegister_name">
+            <span class="myRegister_name_letter">姓名</span>
+            <input type="text" placeholder="请填写姓名"/>
+            <span class="myRegister_name_warn warn"></span>
+            <i class="iconfont" style="font-size: 0.7rem">&#xe603;</i>
+        </div>
+        <div class="myRegister_secret">
+            <span class="myRegister_secret_letter">密码</span>
+            <input type="password" placeholder="请填写6到20位密码"/>
+            <span class="myRegister_secret_warn warn"></span>
+            <i class="iconfont" style="font-size: 0.7rem">&#xe601;</i>
+        </div>
+        <div class="myRegister_secret2">
+            <span class="myRegister_secret2_letter">确认密码</span>
+            <input type="password" placeholder="请再次填写密码"/>
+            <span class="myRegister_secret2_warn warn"></span>
+            <i class="iconfont" style="font-size: 0.7rem">&#xe601;</i>
+        </div>
+        <div class="myRegister_message_pic" style="position:relative;">
+            <span class="myRegister_pic_letter">图形验证</span>
+            <input type="text" placeholder="图形验证码" class="myRegister_pic_input" name="register_pic" style="width: 2.7rem;float: left;margin-left: 0.1rem;margin-top: 0.2rem"/>
+            <img src="images/800/yytg01.png" alt="" class="myRegister_pic" style="width: 2rem;height: 0.88rem; float: left;margin-top: 0.5rem;margin-left: 0.2rem"/>
+            <span class="myRegister_change_click" style="font-size: 0.4rem;color: #00a2e7;float: left;margin-top: 0.8rem;margin-left: 0.2rem;">[换一张?]</span>
+            <div class="clearfloat"></div>
+            <span class="myRegister_pic_warn warn"></span>
+        </div>
+        <div class="myRegister_message">
+            <span class="myRegister_message_letter">短信验证</span>
+            <input type="text" placeholder="请填写短信验证码" class="myRegister_message_input"/>
+            <input type="button" value="获取验证码" class="myRegister_message_btn"/>
+            <span class="myRegister_message_warn warn"></span>
+        </div>
+        <div style="text-align: center; margin-top: -0.4rem">
+            <input type="checkbox"/><!--
+            --><span style="font-size: 0.45rem;color: #353535;">同意<a href="1.docx" style="color:#f64850;font-size: 0.45rem;text-decoration: none;">《网站注册协议》</a></span>
+        </div>
+        <input type="button" value="注册" class="myRegister_btn"/>
+    </div>
+</body>
+</html>

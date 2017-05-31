@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>宏通道渠道推广</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,width=device-width">
+    <link href="css/mystyle.css" rel="stylesheet" type="text/css"/>
+    <script src="js/jquery-1.12.3.js" type="text/javascript"></script>
+    <script src="js/myJs.js" type="text/javascript"></script>
+    <script>
+        document.getElementsByTagName('html')[0].style.fontSize = window.screen.width / 10 + 'px';
+    </script>
+</head>
+<body>
+    <div class="channel">
+        <h2 class="channel_title">渠道推广</h2>
+        <div class="channel_name">
+            <span class="channel_name_letter">渠道方名称</span>
+            <input type="text" placeholder="请输入您的渠道名如:XX商家"/>
+        </div>
+        <div class="clearfloat"></div>
+        <div class="channel_type">
+            <span class="channel_type_letter">渠道类型</span>
+            <div class="channel_wrapInput">
+                <input type="checkbox" id="channel_person" style="margin-left: 0.26rem" checked="checked"/><label for="channel_person">个人</label>
+                <input type="checkbox" id="channel_company"/><label for="channel_company">公司</label>
+                <input type="checkbox" id="channel_business"/><label for="channel_business">商家</label>
+            </div>
+        </div>
+        <div class="channel_team">
+            <span class="channel_team_letter">团队规模</span>
+            <div class="channel_wrapInput">
+                <input type="checkbox" id="channel_team1" style="margin-left: 0.26rem" checked="checked"/><label for="channel_team1">1-10人</label>
+                <input type="checkbox" id="channel_team2" style="margin-left: -0.39rem"/><label for="channel_team2">10-20人</label>
+                <input type="checkbox" id="channel_team3" style="margin-left: -0.5rem;"/><label for="channel_team3" style="margin-right: 0;">20人以上</label>
+            </div>
+        </div>
+        <div class="channel_resource">
+            <span class="channel_type_letter">推广资源</span>
+            <div class="channel_wrapInput">
+                <input type="checkbox" id="channel_up" style="margin-left: 0.26rem" checked="checked"/><label for="channel_up">线上</label>
+                <input type="checkbox" id="channel_down"/><label for="channel_down">线下</label>
+            </div>
+        </div>
+
+        <div class="channel_core_resource">
+            <span class="channel_core_letter">核心资源</span>
+            <input type="text" placeholder="请输入您的核心资源"/>
+        </div>
+        <div class="channel_experience" style="height: 3.8rem">
+            <span class="channel_core_letter">推广经验</span>
+            <textarea placeholder="请填写具体产品或项目"></textarea>
+        </div>
+
+        <div class="channel_place">
+            <span class="channel_place_letter">主营地点</span>
+            <input type="text" placeholder="请输入您的主营地点:大小不限"/>
+        </div>
+        <span class="channel_warn" style="margin-top: 0.2rem"></span>
+        <input type="button" value="提交" class="channel_btn"/>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,374 @@
+
+/**加载图标CSS**/
+@font-face {font-family: 'iconfont';
+    src: url('../iconfont2/iconfont.eot'); /* IE9*/
+    src: url('../iconfont2/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../iconfont2/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../iconfont2/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../iconfont2/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/**重置css样式**/
+
+*{
+    font-family: "Microsoft YaHei" !important;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3.h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input[type=text],input[type=button]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 0.4rem;
+    color:#a7a7a7 ;
+}
+
+/**清除浮动css**/
+.clearfloat{
+    zoom: 1;
+}
+.clearfloat:after{
+    display: block;
+    content: "clear";
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+/**菜单样式**/
+.menu{
+    width: 9.5rem;
+    color: white;
+    font-size: 0.4rem;
+    margin: 0.5rem auto 0 auto;
+    position: relative;
+}
+.menu .logo{
+    margin-left: 1rem;
+}
+.logo img{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.logo .logo_letter{
+    font-size: 0.6rem;
+    color:#272727;
+    font-weight: bold;
+    display: inline-block;
+}
+.menu_btn{
+    font-size: 0.8rem;
+    color: #a7a7a7;
+    display: inline-block;
+    margin-right: 0.7rem;
+    float: right;
+}
+.menu ul{
+    border: 1px solid red;
+    background: #fd3f3e;
+    color: white;
+    z-index: 30;
+}
+.menu ul li a{
+    display: block;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    margin-left: 0.6rem;
+    font-size: 0.4rem;
+    color: white;
+}
+.menu ul li:hover{
+    color: #1d1d1d;
+}
+.menu ul li a i{
+    margin-right: 0.2rem;
+}
+/**footer css**/
+
+.footer .footer_graph{
+    width: 6rem;
+    height: 1rem;
+    display: block;
+}
+.contact_us,.success_case,.company,.about_us{
+    background: #262626;
+    color: white;
+    width: 100%;
+    border-bottom: 1px dashed #999999;
+}
+.contact_us h4,.success_case h4,.company h4,.about_us h4{
+    margin: 0 auto 0.1rem auto;
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 500;
+    padding-top: 0.2rem;
+    padding-left: 0.5rem ;
+    padding-bottom: 0.2rem;
+}
+.contact_us ul{
+    margin-bottom: 0.3rem;
+}
+
+.contact_us ul li{
+    height: 0.8rem;
+    font-size: 0.4rem;
+    color: #999999;
+    margin-left: 0.7rem;
+}
+.contact_us ul li i{
+    margin-right: 0.2rem;
+}
+.success_case ul{
+    margin-bottom: 0.3rem;
+}
+.success_case ul li{
+    height: 0.8rem;
+    font-size:0.4rem;
+    color: #999999;
+    margin-left: 0.7rem;
+}
+.company div{
+    color:#999999;
+    font-size: 0.4rem;
+    width: 6.5rem;
+    margin-left: 0.7rem;
+    line-height: 0.58rem;
+}
+.company a{
+    margin-left: 0.7rem;
+    display: block;
+    margin-top: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+.about_us div{
+    color: #999999;
+    font-size: 0.4rem;
+    line-height: 0.6rem;
+    width: 7.5rem;
+    margin-left: 0.7rem;
+    margin-bottom: 0.6rem;
+}
+.copyright{
+    width: 100%;
+    height: 1.5rem;
+    background: #1d1d1d;
+    text-align: center;
+    position: relative;
+}
+.copyright img{
+    width: 4.5rem;
+    height: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -2.25rem;
+    margin-top: -0.5rem;
+}
+
+/**成功案例css**/
+.case{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.case .show h4,.reason .reason_show h4,.process .process_show h4{
+    font-size: 0.6rem;
+    color: #272727;
+    margin-bottom: 0.4rem;
+}
+.case .show p,.reason .reason_show p,.process_show p{
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.4rem;
+    color: #727272;
+
+}
+.case .show{
+    margin-bottom: 0.5rem;
+}
+.pic{
+    position: relative;
+    width: 100%;
+}
+.case .pic img{
+    width: 100%;
+    display: block;
+}
+.case .hint{
+    padding-top: 0.15rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 0.3rem;
+    color: white;
+    width: 100%;
+    height: 1.1rem;
+    text-align: center;
+    background: #1d1d1d;
+    display: none;
+}
+/**展示区**/
+.show_off{
+    position: relative;
+    margin-bottom: 0.7rem;
+}
+.show_off .show_register{
+    width: 100%;
+    background: #fd3f3f;
+    font-size: 0.5rem;
+    color: white;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    position: relative;
+}
+.show_register .register_letter{
+    font-weight: 600;
+    margin-left: 0.8rem;
+}
+.show_register a{
+    display: inline-block;
+    background: white;
+    color: #fd3f3f;
+    border-radius: 0.08rem;
+    width: 2rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    position: absolute;
+    margin-top: -0.4rem;
+    right: 0.7rem;
+    top: 50%;
+    font-size:0.35rem;
+    text-align: center;
+}
+.vip{
+    display: inline-block;
+    margin-top: 0.8rem;
+}
+.vip_choose{
+    background: url("../images/800/show2.png") no-repeat;
+    background-size: 100% 100%;
+    width: 3rem;
+    height: 2rem;
+    margin-bottom: 0.4rem;
+    margin-left: 0.5rem;
+    color: #999999;
+    text-align: center;
+}
+.vip_choose i{
+    display: inline-block;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+.vip_choose span{
+    display: block;
+    font-size: 0.35rem;
+}
+.vip_active{
+    background: url("../images/800/show.png") no-repeat;
+    background-size:100% 100%;
+    color: white;
+}
+.vip_letter1{
+    display: inline-block;
+    float: right;
+    margin-right: 0.2rem;
+    margin-top: 0.4rem;
+}
+.vip_letter1 h3{
+    font-size: 0.5rem;
+    color: #1d1d1d;
+    font-weight: 600;
+}
+.vip_letter1 ul li{
+    font-size: 0.4rem;
+    color:#727272;
+    margin-bottom: 0.2rem;
+    width: 5.8rem;
+}
+.vip_letter1 ul li span{
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    background: #f64850;
+    margin-right: 0.2rem;
+}
+
+/**选择宏通道的理由**/
+.reason{
+    width: 100%;
+    background: #eeeeee;
+    text-align: center;
+    padding-top: 0.7rem;
+}
+.reason_detail{
+    text-align: center;
+    width: 100%;
+    background: #eeeeee;
+    border-bottom: 1px dashed #999999;
+    padding-top: 0.5rem;
+}
+.reason_detail img{
+    width: 4rem;
+    height: 3.2rem;
+}
+.reason_detail p{
+    font-size: 0.4rem;
+    color: #999999;
+    margin-top: -0.1rem;
+}
+/**咨询流程**/
+.process{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.7rem;
+}
+.detail_main{
+    background: url("../images/800/a.png");
+    background-size:100% 100%;
+    width: 5rem;
+    height: 3.125rem;
+    color: #999999;
+    margin: 0.5rem auto 0.3rem auto;
+    line-height: 2.8rem;
+}
+.main_active{
+    background: url("../images/800/b.png");
+    background-size: 100% 100%;
+    color:#f64850;
+}
+.detail_main i{
+    display: block;
+    font-size: 1.7rem;
+}
+.process_detail span{
+    display: block;
+    font-size: 0.35rem;
+    color: #999999;
+    width: 7.5rem;
+    margin: 0 auto;
+}
