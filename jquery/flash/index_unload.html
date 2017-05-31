@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>闪电侠</title>
+        <meta name="description" content="闪电侠">
+        <meta name="keywords" content="物流">
+        <meta name="author" content="">
+        <link rel="" href="">
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/flash_normal.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+        <script type="text/javascript" src="js/flash_normal.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!--[if lt IE 10]>
+        <noscript>
+            <style>.html5-wrappers{display:none!important;}</style>
+            <div class="ie-noscript-warning">您的浏览器禁用了脚本，请启用脚本!!!
+            </div>
+        </noscript>
+        <script> 
+            $(document).ready(function(){
+                document.getElementById("resetcss").href="css/reset-ie.css";
+            });
+        </script>
+        <![endif]-->
+
+    </head>
+    <body style="background:#fff;">
+    <div class="web-nav">
+        <div class="web-nav-center">
+            <div class="nav-title">
+                <img src="css/images/logo-header.png">
+            </div>
+            <div class="navMenu">
+                <div id="fill"></div>
+                <ul class="leftMenu">
+                    <li class="option">
+                        <a class="content" href="index_unload.html">首页</a>
+                    </li>
+                    <li class="option">
+                        <a class="content" href="brief_introduction.html">关于闪电</a>
+                        <div class="text_decoration2"></div>
+                        <ul>
+                            <li><a href="brief_introduction.html">闪电简介</a></li>
+                            <li><a href="brief_introduction.html">合作伙伴</a></li>
+                        </ul>
+                    </li>
+                    <li class="option">
+                        <a class="content" href="industry_dynamic.html">闪电快讯</a>
+                        <div class="text_decoration2"></div>
+                        <ul>
+                            <li><a href="industry_dynamic.html">行业动态</a></li>
+                        </ul>
+                    </li>
+                    <li class="option">
+                        <a class="content" href="policy.html">政策法规</a>
+                        <div class="text_decoration2"></div>
+                        <ul>
+                            <li><a href="policy.html">中国政策</a></li>
+                            <li><a href="policy.html">海关政策</a></li>
+                            <li><a href="policy.html">美国政策</a></li>
+                        </ul>
+                    </li>
+                    <li class="option">
+                        <a class="content" href="flash_class.html">闪电学堂</a>
+                        <div class="text_decoration2"></div>
+                        <ul>
+                            <li><a href="flash_class.html">外贸基础</a></li>
+                            <li><a href="flash_class.html">电商学堂</a></li>
+                            <li><a href="flash_class.html">操作指南</a></li>
+                            <li><a href="flash_class.html">轻松下载</a></li>
+                            <li><a href="flash_class.html">举手提问</a></li>
+                        </ul>
+                    </li>
+                    <li class="option">
+                        <a class="content" href="contact_us.html">联系我们</a>
+                        <div class="text_decoration2"></div>
+                        <ul>
+                            <li><a href="contact_us.html">联系我们</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <span></span>
+                <ul class="rightMenu">
+                    <li class="option click_register"><a class="content" href="javascript:;">注册</a></li>
+                    <li class="option click_login"><a class="content" href="javascript:;">登录</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="index-content">
+            <div class="index-content-in">
+                <div class="index-content-tag">
+                    <div class="content-tag-header">
+                        <div class="content-tag"></div>
+                        <label class="content-tag-p tag1" for="enquiry-type1" onclick="tabChange(0);">FBA空运询价</label><input id="enquiry-type1" class="content-tag-input tag-radio1" type="radio" name="enquiry-type" value="1">
+                        <div class="content-tag"></div>
+                        <label class="content-tag-p tag2" for="enquiry-type2" onclick="tabChange(1);">FBA海运整柜询价</label><input id="enquiry-type2" class="content-tag-input tag-radio2" type="radio" name="enquiry-type" value="2">
+                        <div class="content-tag"></div>
+                        <label class="content-tag-p tag3" for="enquiry-type3" onclick="tabChange(2);">FBA海运散柜询价</label><input id="enquiry-type3" class="content-tag-input tag-radio3" type="radio" name="enquiry-type" value="3">
+                        <div class="content-tag"></div>
+                        <label class="content-tag-p tag4" for="enquiry-type4" onclick="tabChange(3);">FBA快递询价</label><input id="enquiry-type4" class="content-tag-input tag-radio4" type="radio" name="enquiry-type" value="4">
+                        <div class="float-clear"></div>
+                    </div>
+                    <div class="content-tag-form tag-form">
+                    </div>
+                    <div class="tag-form-content">
+                        <div class='control-group'>
+                            <label class='control-label' for="start_site">起运地</label>
+                            <div class='controls'>
+                                <div class="styled-select">
+                                    <select id="start_site" class="input-span input-width215">
+                                        <option></option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='control-group'>
+                            <label class='control-label' for="fba_code">目的地</label>
+                            <div class='controls'>
+                                <input class="input-span input-width12" id='fba_code' placeholder='FBA编码' type='text' />
+                                <select id="fba_site" class="input-span input-width9">
+                                    <option>州</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                                <input class="input-span input-width116" id='post_code' placeholder='邮编' type='text' />
+                            </div>
+                        </div>
+                        <div class='control-group'>
+                            <label class='control-label' for="goods_desc">货物描述</label>
+                            <div class='controls'>
+                                <input class="input-span input-width213" id='goods_desc' placeholder='一般商品' type='text' disabled="disabled" />
+                            </div>
+                        </div>
+                        <div class='control-group'>
+                            <label class='control-label' for="goods_weight">重量</label>
+                            <div class='controls'>
+                                <input class="input-span input-width213" id='goods_weight' placeholder='' type='text' />
+                                <select id="weight_unit" class="input-span input-width118">
+                                    <option>KGS</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class='control-group'>
+                            <label class='control-label' for="goods_volume">体积</label>
+                            <div class='controls'>
+                                <input class="input-span input-width213" id='goods_volume' placeholder='' type='text' />
+                                <select id="volume_unit" class="input-span input-width118">
+                                    <option>CBM</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class='control-group relatived'>
+                            <div class="btn-large"></div>
+                            <label class="btn-largeP" onclick="document.location='airsea-roughenquiry.html'">免费询价</label>
+                        </div>
+                    </div>
+                    <div class="tag-form-content2" style="display:none;">
+                        <div class='control-group'>
+                            <label class='control-label' for="start_site">起运地</label>
+                            <div class='controls'>
+                                <div class="styled-select">
+                                    <select id="start_site" class="input-span input-width215">
+                                        <option></option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='control-group'>
+                            <label class='control-label' for="fba_code">目的地</label>
+                            <div class='controls'>
+                                <input class="input-span input-width12" id='fba_code' placeholder='FBA编码' type='text' />
+                                <select id="fba_site" class="input-span input-width9">
+                                    <option>州</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                                <input class="input-span input-width116" id='post_code' placeholder='邮编' type='text' />
+                            </div>
+                        </div>
+                        <div class="goodsnumberdiv">
+                        <div class='control-group goodsnumber'>
+                            <label class='control-label' for="fba_code">货物信息1</label>
+                            <div class="controls">
+                                <input class="input-span input-width72" type="text" placeholder="长(cm)">
+                                <input class="input-span input-width72" type="text" placeholder="宽(cm)">
+                                <input class="input-span input-width72" type="text" placeholder="高(cm)">
+                                <input id="express-goodsweight2" class="input-span input-width6" type="text" placeholder="重量(kg)">
+                                <input class="input-span input-width6" type="text" placeholder="件数">
+                                <input type="button" class="indexaddgoods" value="+添加货物">
+                                <span class="express-goodsweight2">提示:&nbsp;快递是21kg起步的哦,获得更多帮助请咨询400-7117-800</span>
+                            </div>
+                        </div>
+                        </div>
+                        <div class='control-group relatived'>
+                            <div class="btn-large"></div>
+                            <label class="btn-largeP" onclick="document.location='express-roughenquiry.html'">免费询价</label>
+                        </div>
+                    </div> 
+                </div>
+                <div class="index-content-win">
+                    <div class="content-win-header"></div>
+                    <label class="content-win-p">货物跟踪</label>
+                    <div class="content-win-body">
+                    </div>
+                    <div class="win-body-content">
+                        <div class="control-group-ud"> 
+                            <label class='control-label-ud' for="goods_style">类型</label>
+                            <div>
+                                <select id="goods_style" class="goods_style">
+                                    <option>FBA空运</option>
+                                    <option>FBA海运整柜</option>
+                                    <option>FBA海运散货</option>
+                                    <option>FBA快递</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group-ud"> 
+                            <label class='control-label-ud' for="goods_num">单号</label>
+                            <div>
+                                <input class="goods_num" id='goods_num' placeholder='' type='text' />
+                            </div>
+                        </div>
+                        <div class='win-body relatived'>
+                            <div class="btn-large2"></div>
+                            <label class="btn-large2P">立即查询</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="signin-ad">
+            <div class="signin-center">
+                <div class="signin-info">
+                    <img src="css/images/img-adv.png">
+                    <div>
+                        <label>注册成为闪电侠会员</label>
+                        <span>获取更精准的报价，还可享受一系列增值服务</span>
+                    </div>
+                </div>
+                <div class="signin-bt">
+                    <div class="btn-larger click_register">立即注册</div>
+                </div>
+            </div>
+        </div>
+        <div class="reason-ad">
+            <div class="a_Line">
+            </div>
+            <div class="reason-adTitle">
+                <label>选择我们的<a>8</a>个理由</label>
+                <span>FLASH MAN INTERNATION LOGISTICS，LLC，一家注册在美国达拉斯的国际物流企业</span>
+            </div>
+            <div class="reason-adContent">
+                <div class="adContentL">
+                    <ul>
+                        <li>
+                            <img src="css/images/pic-0.png">
+                            <div>
+                            <label>专业</label>
+                            <span>2001年成立，旗下业务包括国际货运代理、通关服务、仓储、国际物流及其美国内陆物流等。2010年起，公司成立亚马逊FBA物流部，专为美国本土亚马逊卖家提供运输、仓储、FBA预约及其送仓等服务，至今业务覆盖全美所有亚马逊FBA仓</span>
+                            <div class="float-clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="css/images/pic-1.png">
+                            <div>
+                            <label>价格低</label>
+                            <span>闪电侠拥有超过2000家运输服务供货商，同时也拥有了更优惠的市场价格信息</span>
+                            <div class="float-clear"></div>
+                            </div>                 
+                        </li>
+                        <li>
+                            <img src="css/images/pic-2.png">
+                            <div>
+                            <label>货物安全</label>
+                            <span>闪电侠网站后台会对货物全程跟踪，时时动态更新，货物动态一目了然</span>
+                            <div class="float-clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="css/images/pic-3.png">
+                            <div>
+                            <label>运输时效</label>
+                            <span>海运、空运3-5天离港，快递10点前当天航班，10点后隔天航班离港</span>
+                            <div class="float-clear"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="adContentR">
+                    <ul>
+                        <li>
+                            <img src="css/images/pic-4.png">
+                            <div>
+                                <label>方便快捷</label>
+                                <span>只需您成为我们的网站的会员，后台将会给您提供询价、下单、反货、跟踪一站式服务</span>
+                                <div class="float-clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="css/images/pic-5.png">
+                            <div>
+                            <label>清关能力强</label>
+                            <span>闪电侠美国公司协助清关，让货物清关无忧、查验无忧、入库无忧</span>
+                            <div class="float-clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="css/images/pic-6.png">
+                            <div>
+                            <label>退换货、更换标签</label>
+                            <span>在美国洛杉矶、芝加哥、纽约、达拉斯等七大城市有自己的仓库</span>
+                            <div class="float-clear"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="css/images/pic-7.png">
+                            <div>
+                            <label>订单处理</label>
+                            <span>您的订单会由闪电侠客服一对一处理，快如闪电</span>
+                            <div class="float-clear"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="float-clear"></div>
+            </div>
+            <div class="float-clear"></div>
+        </div>
+        <div id="footer">
+            <div class="a_Line2">
+            </div>
+            <div class="wrapper clearfloat">
+                <div class="left clearfloat">
+                    <img src="css/images/logo-footer.png" alt="" id="logo"/>
+                    <div class="letter">
+                        <div class="company">
+                            <img src="css/images/icon-add.png"/>
+                            <span>浙江省杭州市江干区弘通丁兰商业中心3幢831室</span>
+                        </div>
+                        <div class="telephone">
+                            <img src="css/images/icon-tel.png"/>
+                            <span>400-7117-800</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right clearfloat">
+                    <div class="nav">
+                        <span class="title">联系我们</span>
+                        <ul>
+                            <li><a href="contact_us.html">联系我们</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav">
+                        <span class="title">闪电学堂</span>
+                        <ul>
+                            <li><a href="flash_class.html">外贸基础</a></li>
+                            <li><a href="flash_class.html">电商学堂</a></li>
+                            <li><a href="flash_class.html">操作指南</a></li>
+                            <li><a href="flash_class.html">轻松下载</a></li>
+                            <li><a href="flash_class.html">举手提问</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav">
+                        <span class="title">政策法规</span>
+                        <ul>
+                            <li><a href="policy.html">中国政策</a></li>
+                            <li><a href="policy.html">海关政策</a></li>
+                            <li><a href="policy.html">美国政策</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav">
+                        <span class="title">闪电快讯</span>
+                        <ul>
+                            <li><a href="industry_dynamic.html">行业动态</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav">
+                        <span class="title">关于闪电</span>
+                        <ul>
+                            <li><a href="brief_introduction.html">闪电简介</a></li>
+                            <li><a href="brief_introduction.html">合作伙伴</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom">Copyright © 2016 flashman.com.All rights reserved.  ICP:12345678910</div>
+        </div>
+
+    <div class="filter" style="display: none;"></div>
+    <div>
+        <div id="login" class="upper" style="display: none;">
+            <div class="title2">用 户 登 录</div>
+            <div class="choose-phone">
+                <span>手 机：</span>
+                <input type="text" placeholder="用于注册的手机号" autocomplete="off"/>
+            </div>
+            <div class="choose-secret">
+                <span>密 码：</span>
+                <input type="password" placeholder="密码,6到20位英文及数字组成" autocomplete="off"/>
+            </div>
+            <div class="choose-agree">
+                <input type="checkbox" id="auto_login"/> <label for="auto_login">自动登录</label>
+                <span class="click_forget"><a href="javascript:;">忘记密码？</a></span>
+            </div>
+            <span class="warn"></span>
+            <input type="button" value="登录" class="login_btn"/>
+        </div>
+        <div id="register" class="upper" style="display: none;">
+            <div class="title2">注 册</div>
+            <div class="choose-phone">
+                <span>手 机：</span>
+                <input type="text" placeholder="用于注册的手机号" autocomplete="off" id="user_mobile"/>
+
+            </div>
+            <div class="choose-secret">
+                <span>密 码：</span>
+                <input type="password" placeholder="密码,6到20位英文及数字组成" autocomplete="off" id="user_password"/>
+
+            </div>
+            <div class="choose-secret2">
+                <span>密 码：</span>
+                <input type="password" placeholder="再次输入密码" autocomplete="off" id="user_repassword"/>
+
+            </div>
+            <div class="choose-vertify">
+                <span>验 证：</span>
+                <input type="text" placeholder="收到的短信验证码" autocomplete="off" id="vertify_code"/>
+                <input type="button" value="立即发送" class="transfer"/>
+
+            </div>
+            <div class="choose-agree">
+                <input type="checkbox"/>
+                <span>同意<span id="protocal"><a href="javascript:;" class="protocal_letter">《网站注册协议》</a></span></span>
+            </div>
+            <span class="warn"></span>
+            <input type="button" value="立即注册" id="btn" style="width:284px;margin-left:-18px;"/>
+        </div>
+        <div id="forget" class="upper" style="display: none;">
+            <div class="title2">忘 记 密 码</div>
+            <div class="choose-phone">
+                <span>手 机：</span>
+                <input type="text" placeholder="已注册的手机号" autocomplete="off"/>
+
+            </div>
+            <div class="choose-secret">
+                <span>密 码：</span>
+                <input type="password" placeholder="新密码,6到20位英文及数字组成" autocomplete="off"/>
+
+            </div>
+            <div class="choose-secret2">
+                <span>密 码：</span>
+                <input type="password" placeholder="再次输入新密码" autocomplete="off"/>
+
+            </div>
+            <div class="choose-vertify">
+                <span>验 证：</span>
+                <input type="text" placeholder="收到的短信验证码" autocomplete="off"/>
+                <input type="button" value="立即发送" class="use_transfer transfer"/>
+
+            </div>
+            <span class="warn"></span>
+            <input type="button" value="重置密码" class="forget_sure"/>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>闪电侠</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+        <meta name="description" content="闪电侠">
+        <meta name="keywords" content="物流">
+        <meta name="author" content="">
+        <link rel="" href="">
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/flash_normal.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/date_input.css" />
+        <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script> 
+        <script type="text/javascript" src="js/jquery.date_input.pack.js"></script> 
+        <script type="text/javascript" src="js/flash_normal.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!--[if lt IE 10]>
+        <noscript>
+            <style>.html5-wrappers{display:none!important;}</style>
+            <div class="ie-noscript-warning">您的浏览器禁用了脚本，请启用脚本!!!
+            </div>
+        </noscript>
+        <script> 
+            $(document).ready(function(){
+                document.getElementById("resetcss").href="css/reset-ie.css";
+            });
+        </script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="web-nav">
+            <div class="web-nav-center">
+                <div class="nav-title">
+                    <img src="css/images/logo-header.png">
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-menu-child1"><a href="index.html" class="newhomeP">首页</a><i></i></div>
+                    <div class="nav-menu-child2" id="person-menu"><a href="" class="newhomeP"></a>
+                        <ul>
+                            <li class="personal_menu">个人中心<img class="personal_pull" src="css/images/btn-pull-n.png"><div class="text_decoration"></div></i></li>
+                            <li><a href="account-info.html">账户设置</a></li>
+                            <li><a href="exact-enquiry.html">精准询价</a></li>
+                            <li><a href="bspace-manage.html">订舱管理</a></li>
+                            <li><a href="goodstrack_query.html">跟踪查询</a></li>
+                            <li><a href="freight_pay.html">运费支付</a></li>
+                            <li>退出登录</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-content">
+            <div class="custom-menu">
+                <div class="member-level">
+                    <img src="css/images/V2.png">
+                    <div>
+                       欢迎您，尊敬的高级会员
+                    </div>
+                </div>
+                <ul>
+                    <a href="account-info.html"><li>账户设置</li></a>
+                    <a href="exact-enquiry.html"><li style="background: #737373;border-top:1px solid #fff;color:#fff;">精准询价</li></a>
+                    <a href="bspace-manage.html"><li>订舱管理</li></a>
+                    <a href="goodstrack_query.html"><li>跟踪查询</li></a>
+                    <a href="freight_pay.html"><li>运费支付</li></a>
+                </ul>
+            </div>
+            <div class="custom-menu-info">
+                <div class="menu-info-tag">
+                    <div class="info-fbatag border-right" style="background: #737373;color:#fff;" onclick="tagChange2(0);">FBA空运询价</div>
+                    <div class="info-fbatag border-right" id="thelongerdiv" onclick="tagChange2(1);">FBA海运整柜询价</div>
+                    <div class="info-fbatag border-right" onclick="tagChange2(2);">FBA海运散货询价</div>
+                    <div class="info-fbatag" onclick="tagChange2(3);">FBA快递询价</div>
+                </div>
+                <div class="info-tag-div absoultDiv">
+                    <div class="info-control"><label class="info-control-label"><h3><strong>货物信息:</strong></h3></label></div>
+                    <div class="info-control info-bk">
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">起运地</label>
+                            <div class="controls">
+                                <select class="input-span input-width40">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">目的地</label>
+                            <div class="controls">
+                                <input class="input-span input-width30" type="text" placeholder="FBA编号">
+                                <select class="input-span input-width93">
+                                    <option>州</option>
+                                </select>
+                                <input class="input-span input-width15" type="text" placeholder="邮编">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">货物类型</label>
+                            <div class="controls">
+                                <div class="goodstype-div"><input title="托盘+货物尺寸不得超过100*120*210CM,重量不得超过500kg" type="radio" name="airgoodstype" id="airgoodstype1"  checked="checked"><label for="airgoodstype1" style="cursor:pointer;" title="托盘+货物尺寸不得超过100*120*210CM,重量不得超过500kg">无托散货</label></div>
+                                <div class="goodstype-div"><input type="radio" name="airgoodstype" id="airgoodstype2"><label for="airgoodstype2" style="cursor:pointer;">有托盘</label></div>
+                                <div class="goodstype-div"><input title="a.单件货物重量超过1000t&#13b.长度超过1.2m或者宽度超过1m或者高度超过1.2m&#13c.总计超过15m³或者5000t&#13" type="radio" name="airgoodstype" id="airgoodstype3"><label title="a.单件货物重量超过1000t&#13b.长度超过1.2m或者宽度超过1m或者高度超过1.2m&#13c.总计超过15m³或者5000t&#13" for="airgoodstype3" style="cursor:pointer;">超大/超重货物</label></div>
+                            </div>
+                            <div class="float-clear"></div>
+                        </div>
+                        <div class="control-group addgoods-div">
+                            <label class="info-control-label minifloat-left">货物<span class="goodsnumber">1</span></label>
+                            <div class="controls">
+                                <input class="input-span input-width20" type="text" placeholder="中文描述">
+                                <input class="input-span input-width192" type="text" placeholder="英文描述">
+                                <input class="input-span input-width15" type="text" placeholder="产品型号">
+                                <input class="input-span input-width6" type="text" placeholder="箱数">
+                            </div>
+                            <div class="controls">
+                                <input class="input-span input-width12" type="text" placeholder="货物毛重" style="margin-right:0px;">
+                                <select class="input-span input-width8">
+                                    <option>KGS</option>
+                                </select>
+                                <input class="input-span input-width113" type="text" placeholder="货物体积" style="margin-right:0px;">
+                                <select class="input-span input-width8">
+                                    <option>CBM</option>
+                                </select>
+                                <input class="input-span input-width15" type="text" placeholder="报关单价(¥)">
+                                <input class="input-span input-width6" type="text" placeholder="PCS数">
+                                <input class="input-span input-width10" type="text" placeholder="报关总价(¥)">
+                            </div>
+                            <div class="controls">
+                                <div class="addgoods"><h4><a>+添加货物</a></h4></div>
+                            </div>
+                            <div class="float-clear"></div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">总信息</label>
+                            <div class="controls">
+                                <input class="input-span input-width12" type="text" placeholder="货物总毛重" style="margin-right:0px;">
+                                <select class="input-span input-width8">
+                                    <option>KGS</option>
+                                </select>
+                                <input class="input-span input-width113" type="text" placeholder="货物总体积" style="margin-right:0px;">
+                                <select class="input-span input-width8">
+                                    <option>CBM</option>
+                                </select>
+                            </div>
+                        </div>                  
+                    </div>
+                    <div class="info-control"><label class="info-control-label"><h3><strong>起运地和目的地服务:</strong></h3></label></div>
+                    <div class="info-control info-bk2 add-padding">
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left" style="margin-right: 20px;">起运地服务</label>
+                            <div class="controls large-div">
+                                <div class="start-serve">
+                                    <input type="checkbox" name="airBaoguan" id="airDaili"  checked="checked"><label for="airDaili">代理报关</label>
+                                </div>
+                                <div class="start-serve">
+                                    <input type="radio" name="airXuke" id="airYes"  checked="checked"><label for="airYes">有出口许可权</label><br>
+                                    <input type="radio" name="airXuke" id="airNo"><label for="airNo">没有出口许可权<br>(买单费V2会员特惠:¥100)</label>
+                                </div>
+                                <div class="start-serve">
+                                    <input type="checkbox" name="airBaoguan" id="airFankong"  checked="checked"><label for="airFankong">出口反恐申报</label>
+                                </div>
+                                
+                            </div>
+                            <div class="float-clear"></div>
+                        </div>
+
+                        <div class="control-group add-uppadding">
+                            <label class="info-control-label minifloat-left">目的地服务</label>
+                            <div class="controls" style="padding-top:15px;margin-left:20px;">
+                                <input type="checkbox" name="airqingguan" id="airqingguan"  checked="checked"><label for="airqingguan" style="cursor:pointer;font-size:14px;">目的地代理清关<br>(手续费V2会员特惠:¥80)</label>
+                            </div>
+                        </div>
+                        <div class="control-group add-uppadding addgoods-goods">
+                            <label class="info-control-label minifloat-left">货物1</label>
+                            <div class="controls">
+                                <input class="input-span input-width20" type="text" placeholder="英文描述" title="英文描述">
+                                <input class="input-span input-width192" type="text" placeholder="目的地国海关编码">
+                                <input class="input-span input-width15" type="text" placeholder="官税率(%)">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left"></label>
+                            <div class="controls">
+                                <div class="duties-line"></div>
+                                <div class="duties"><h4><strong>总关税：¥600</strong></h4></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="info-control">
+                        <div class="info-control-label need-invoice">
+                            <input type="radio" name="airinvoice" id="airinvoice1" checked="checked"><label for="airinvoice1">需要发票</label>
+                            <input type="radio" name="airinvoice" id="airinvoice2"><label for="airinvoice2">不需要发票</label>
+                        </div>
+                    </div>
+                    
+                    <div class="info-control add-padding">
+                        <div class="info-control-label">
+                            <div class="exact-equiry" id="exactequirybt"><strong>立即询价</strong></div>
+                        </div>
+                    </div>
+                    <div class="float-clear"></div>
+                </div>
+                <div class="info-tag-div" style="display:none;" >
+                    <div class="info-control"><label class="info-control-label"><h3><strong>货物信息:</strong></h3></label></div>
+                    <div class="info-control info-bk">
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">起运地</label>
+                            <div class="controls">
+                                <select class="input-span input-width40">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">目的地</label>
+                            <div class="controls">
+                                <input class="input-span input-width30" type="text" placeholder="FBA编号">
+                                <select class="input-span input-width93">
+                                    <option>州</option>
+                                </select>
+                                <input class="input-span input-width15" type="text" placeholder="邮编">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">货物类型</label>
+                            <div class="controls">
+                                <div class="goodstype-div"><input title="托盘+货物尺寸不得超过100*120*210CM,重量不得超过500kg" type="radio" name="sagoodstype" id="sagoodstype1"  checked="checked"><label title="托盘+货物尺寸不得超过100*120*210CM,重量不得超过500kg" for="sagoodstype1" style="cursor:pointer;">无托散货</label></div>
+                                <div class="goodstype-div"><input type="radio" name="sagoodstype" id="sagoodstype2"><label for="sagoodstype2" style="cursor:pointer;">有托盘</label></div>
+                                <div class="goodstype-div"><input title="a.单件货物重量超过1000t&#13b.长度超过1.2m或者宽度超过1m或者高度超过1.2m&#13c.总计超过15m³或者5000t&#13" type="radio" name="sagoodstype" id="sagoodstype3"><label title="a.单件货物重量超过1000t&#13b.长度超过1.2m或者宽度超过1m或者高度超过1.2m&#13c.总计超过15m³或者5000t&#13" for="sagoodstype3" style="cursor:pointer;">超大/超重货物</label></div>
+                            </div>
+                            <div class="float-clear"></div>
+                        </div>
+                        <div class="control-group addgoods-div1">
+                            <label class="info-control-label minifloat-left">货物<span class="goodsnumber1">1</span></label>
+                            <div class="controls">
+                                <input class="input-span input-width20" type="text" placeholder="中文描述">
+                                <input class="input-span input-width192" type="text" placeholder="英文描述">
+                                <input class="input-span input-width15" type="text" placeholder="产品型号">
+                                <input class="input-span input-width6" type="text" placeholder="箱数">
+                            </div>
+                            <div class="controls">
+                                <input class="input-span input-width12" type="text" placeholder="货物毛重" style="margin-right:0px;">
+                                <select class="input-span input-width8">
+                                    <option>KGS</option>
+                                </select>
+                                <input class="input-span input-width113" type="text" placeholder="货物体积" style="margin-right:0px;">
+                                <select class="input-span input-width8">
+                                    <option>CBM</option>
+                                </select>
+                                <input class="input-span input-width15" type="text" placeholder="报关单价(¥)">
+                                <input class="input-span input-width6" type="text" placeholder="PCS数">
+                                <input class="input-span input-width10" type="text" placeholder="报关总价(¥)">
+                            </div>
+                            <div class="controls">
+                                <div class="addgoods1"><h4><a>+添加货物</a></h4></div>
+                            </div>
+                            <div class="float-clear"></div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">总信息</label>
+                            <div class="controls">
+                                <input class="input-span input-width12" type="text" placeholder="货物总毛重" style="margin-right:0px;">
+                                <select class="input-span input-width8">
+                                    <option>KGS</option>
+                                </select>
+                                <input class="input-span input-width113" type="text" placeholder="货物总体积" style="margin-right:0px;">
+                                <select class="input-span input-width8">
+                                    <option>CBM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">所需集装箱</label>
+                            <div class="controls">
+                                <label class="input-span input-width10 container">20`小集装箱</label>
+                                <input class="input-span input-width95" type="text" placeholder="个数">
+                                <label class="input-span input-width10 container">40`中集装箱</label>
+                                <input class="input-span input-width9" type="text" placeholder="个数">
+                                <label class="input-span input-width12 container">40`HC大集装箱</label>
+                                <input class="input-span input-width95" type="text" placeholder="个数">
+                                <div class="float-clear"></div>
+                            </div>
+                        </div>                  
+                    </div>
+                    <div class="info-control"><label class="info-control-label"><h3><strong>起运地和目的地服务:</strong></h3></label></div>
+                    <div class="info-control info-bk2 add-padding">
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">起运地服务</label>
+                            <div class="controls large-div" style="margin-left:20px;">
+                                <div class="controls-aline" style="padding-top:5px;">
+                                    <input type="radio" name="sashangmen" id="sashangmen1"  checked="checked"><label for="sashangmen1" style="cursor:pointer;">拖车上门服务</label>
+                                    <input type="radio" name="sashangmen" id="sashangmen2"><label for="sashangmen2" style="cursor:pointer;">码头内装</label>
+                                </div>
+                                <div class="controls-aline">
+                                    <input class="input-span input-width40" type="text" placeholder="货物所在地址,请具体到街道及门牌号">
+                                </div>
+                                <div class="controls-aline">
+                                    <input class="input-span input-width10" type="text" placeholder="联系人">
+                                    <input class="input-span input-width15" type="text" placeholder="电话">
+                                    <div class="inputdateDiv">
+                                        <input class="input-span input-width135 date_picker1" type="text" placeholder="日期选择">
+                                    </div>
+                                </div>
+                                <div class="controls-aline">
+                                    <div class="start-serve">
+                                        <input type="checkbox" name="saseaBaoguan" id="saseaDaili"  checked="checked"><label for="saseaDaili">代理报关</label>
+                                    </div>
+                                    <div class="start-serve">
+                                        <input type="radio" name="saXuke" id="saYes"  checked="checked"><label for="saYes">有出口许可权</label><br>
+                                        <input type="radio" name="saXuke" id="saNo"><label for="saNo">没有出口许可权<br>(买单费V2会员特惠:¥100)</label>
+                                    </div>
+                                    <div class="start-serve">
+                                        <input type="checkbox" name="saBaoguan" id="saFankong"  checked="checked"><label for="saFankong">出口反恐申报</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="float-clear"></div>
+                        </div>
+                        <div class="control-group add-uppadding">
+                            <label class="info-control-label minifloat-left">目的地服务</label>
+                            <div class="controls" style="padding-top:15px;margin-left:20px;">
+                                <input type="checkbox" name="saqingguan" id="saqingguan"  checked="checked"><label for="saqingguan" style="cursor:pointer;font-size:14px;">目的地代理清关<br>(手续费V2会员特惠:¥80)</label>
+                            </div>
+                        </div>
+                        <div class="control-group add-uppadding addgoods-goods1">
+                            <label class="info-control-label minifloat-left">货物1</label>
+                            <div class="controls">
+                                <input class="input-span input-width20" type="text" placeholder="英文描述">
+                                <input class="input-span input-width20" type="text" placeholder="目的地国海关编码">
+                                <input class="input-span input-width15" type="text" placeholder="官税率(%)">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left"></label>
+                            <div class="controls">
+                                <div class="duties-line"></div>
+                                <div class="duties"><h4><strong>总关税：¥600</strong></h4></div>
+                            </div>
+                        </div>
+                        <div class="float-clear"></div>
+                    </div>
+                    <div class="info-control">
+                        <div class="info-control-label need-invoice">
+                            <input type="radio" name="spinvoice" id="spinvoice1"  checked="checked"><label for="spinvoice1">需要发票</label>
+                            <input type="radio" name="spinvoice" id="spinvoice2"><label for="spinvoice2">不需要发票</label>
+                        </div>
+                    </div>
+                    
+                    <div class="info-control add-padding">
+                        <div class="info-control-label">
+                            <div class="exact-equiry" id="exactequirybt"><strong>立即询价</strong></div>
+                        </div>
+                    </div>
+                    <div class="float-clear"></div>
+                </div>
+                <div class="info-tag-div" style="display:none;">
+                    <div class="info-control"><label class="info-control-label"><h3><strong>货物信息:</strong></h3></label></div>
+                    <div class="info-control info-bk">
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">起运地</label>
+                            <div class="controls">
+                                <select class="input-span input-width40">
+                                    <option></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">目的地</label>
+                            <div class="controls">
+                                <input class="input-span input-width30" type="text" placeholder="FBA编号">
+                                <select class="input-span input-width93">
+                                    <option>州</option>
+                                </select>
+                                <input class="input-span input-width15" type="text" placeholder="邮编">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">货物类型</label>
+                            <div class="controls">
+                                <div class="goodstype-div"><input type="radio" title="应亚马逊要求海运货物必须打托,打托尺寸100*120*210CM,我司提供代打托服务，费用1200元/托" name="spgoodstype" id="spgoodstype1"  checked="checked"><label title="应亚马逊要求海运货物必须打托,打托尺寸100*120*210CM,我司提供代打托服务，费用1200元/托" for="spgoodstype1" style="cursor:pointer;">无托散货</label></div>
+                                <div class="goodstype-div"><input type="radio" name="spgoodstype" id="spgoodstype2"><label for="spgoodstype2" style="cursor:pointer;">有托盘</label></div>
+                                <div class="goodstype-div"><input type="radio" title="a.单件货物重量超过1000t&#13b.长度超过1.2m或者宽度超过1m或者高度超过1.2m&#13c.总计超过15m³或者5000t&#13" name="spgoodstype" id="spgoodstype3"><label title="a.单件货物重量超过1000t&#13b.长度超过1.2m或者宽度超过1m或者高度超过1.2m&#13c.总计超过15m³或者5000t&#13" for="spgoodstype3" style="cursor:pointer;">超大/超重货物</label></div>
+                            </div>
+                            <div class="float-clear"></div>
+                        </div>
+                        <div class="control-group addgoods-div2">
+                            <label class="info-control-label minifloat-left">货物<span class="goodsnumber2">1</span></label>
+                            <div class="controls">
+                                <input class="input-span input-width20" type="text" placeholder="中文描述">
+                                <input class="input-span input-width192" type="text" placeholder="英文描述">
+                                <input class="input-span input-width15" type="text" placeholder="产品型号">
+                                <input class="input-span input-width6" type="text" placeholder="箱数">
+                            </div>
+                            <div class="controls">
+                                <input class="input-span input-width12" type="text" placeholder="货物毛重" style="margin-right:0px;">
+                                <select class="input-span input-width8">
+                                    <option>KGS</option>
+                                </select>
+                                <input class="input-span input-width113" type="text" placeholder="货物体积" style="margin-right:0px;">
+                                <select class="input-span input-width8">
+                                    <option>CBM</option>
+                                </select>
+                                <input class="input-span input-width15" type="text" placeholder="报关单价(¥)">
+                                <input class="input-span input-width6" type="text" placeholder="PCS数">
+                                <input class="input-span input-width10" type="text" placeholder="报关总价(¥)">
+                            </div>
+                            <div class="controls">
+                                <div class="addgoods2"><h4><a>+添加货物</a></h4></div>
+                            </div>
+                            <div class="float-clear"></div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">总信息</label>
+                            <div class="controls">
+                                <input class="input-span input-width12" type="text" placeholder="货物总毛重" style="margin-right:0px;">
+                                <select class="input-span input-width8">
+                                    <option>KGS</option>
+                                </select>
+                                <input class="input-span input-width113" type="text" placeholder="货物总体积" style="margin-right:0px;">
+                                <select class="input-span input-width8">
+                                    <option>CBM</option>
+                                </select>
+                            </div>
+                        </div>                  
+                    </div>
+                    <div class="info-control"><label class="info-control-label"><h3><strong>起运地和目的地服务:</strong></h3></label></div>
+                    <div class="info-control info-bk2 add-padding">
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left" style="margin-right:20px;">起运地服务</label>
+                            <div class="controls large-div">
+                                <div class="start-serve">
+                                    <input type="checkbox" name="spbaoguan" id="spdaili"  checked="checked"><label for="spdaili">代理报关</label>
+                                </div>
+                                <div class="start-serve">
+                                    <input type="radio" name="spxuke" id="spyes"  checked="checked"><label for="spyes">有出口许可权</label><br>
+                                    <input type="radio" name="spxuke" id="spno"><label for="spno">没有出口许可权<br>(买单费V2会员特惠:¥100)</label>
+                                </div>
+                                <div class="start-serve">
+                                    <input type="checkbox" name="spbaoguan" id="spfankong"  checked="checked"><label for="spfankong">出口反恐申报</label>
+                                </div>
+                                
+                            </div>
+                            <div class="float-clear"></div>
+                        </div>
+                        <div class="control-group add-uppadding">
+                            <label class="info-control-label minifloat-left">目的地服务</label>
+                            <div class="controls" style="padding-top:15px;margin-left:20px;">
+                                <input type="checkbox" name="spqingguan" id="spqingguan"  checked="checked"><label for="spqingguan" style="cursor:pointer;font-size:14px;">目的地代理清关<br>(手续费V2会员特惠:¥80)</label>
+                            </div>
+                        </div>
+                        <div class="control-group add-uppadding addgoods-goods2">
+                            <label class="info-control-label minifloat-left">货物</label>
+                            <div class="controls">
+                                <input class="input-span input-width20" type="text" placeholder="英文描述">
+                                <input class="input-span input-width192" type="text" placeholder="目的地国海关编码">
+                                <input class="input-span input-width15" type="text" placeholder="官税率(%)">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left"></label>
+                            <div class="controls">
+                                <div class="duties-line"></div>
+                                <div class="duties"><h4><strong>总关税：¥600</strong></h4></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-control">
+                        <div class="info-control-label need-invoice">
+                            <input type="radio" name="spinvoicepart" id="spinvoicepart1"  checked="checked"><label for="spinvoicepart1">需要发票</label>
+                            <input type="radio" name="spinvoicepart" id="spinvoicepart2"><label for="spinvoicepart2">不需要发票</label>
+                        </div>
+                    </div>
+                    
+                    <div class="info-control add-padding">
+                        <div class="info-control-label">
+                            <div class="exact-equiry" id="exactequirybt"><strong>立即询价</strong></div>
+                        </div>
+                    </div>
+                    <div class="float-clear"></div>
+                </div>
+                <div class="info-tag-div" id="infotagDiv" style="display:none;">
+                    <div class="info-control"><label class="info-control-label"><h3><strong>货物信息:</strong></h3></label></div>
+                    <div class="info-control info-bk">
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">起运地邮编</label>
+                            <div class="controls">
+                                <input class="input-span input-width23" type="text">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="info-control-label minifloat-left">目的地</label>
+                            <div class="controls">
+                                <input class="input-span input-width23" type="text">
+                            </div>
+                        </div>
+                        <div class="control-group addgoods-div3">
+                            <label class="info-control-label minifloat-left">货物<span class="goodsnumber3">1</span></span></label>
+                            <div class="controls">
+                                <input class="input-span input-width72" type="text" placeholder="长(cm)">
+                                <input class="input-span input-width72" type="text" placeholder="宽(cm)">
+                                <input class="input-span input-width72" type="text" placeholder="高(cm)">
+                                <input id="express-goodsweight" class="input-span input-width6" type="text" placeholder="重量(kg)">
+                                <input class="input-span input-width6" type="text" placeholder="件数">
+                                <span class="express-goodsweight">&nbsp;&nbsp;提示:快递是21kg起步的哦,获得更多帮助请咨询400-7117-800&nbsp;&nbsp;</span>
+                            </div>
+                        </div>
+                        <div class="controls">
+                            <div class="addexpressGoods"><h4><a>+添加货物</a></h4></div>
+                        </div>
+                        <div class="float-clear"></div>
+                    </div>
+                    <div class="info-control">
+                    <label class="info-control-label"><h3><strong>起运地和目的地服务:</strong></h3></label></div>
+                    <div class="info-control info-bk2 add-padding">
+                        <div class="control-group" id="control1">
+                            <label class="info-control-label minifloat-left" style="margin-right:20px;">起运地服务</label>
+                            <div class="controls large-div">
+                                <div class="controls-aline" style="padding-top:5px;">
+                                    <input type="radio" name="exqujian" id="exqujian1"><label for="exqujian1" style="cursor:pointer;">闪电侠上门取件(仅限杭州)</label>
+                                    <input type="radio" name="exqujian" id="exqujian2"><label for="exqujian2" style="cursor:pointer;">送至闪电侠仓库</label>
+                                </div>
+                                <div class="controls-aline">
+                                    <input class="input-span input-width464" type="text" placeholder="货物所在地址,请具体到街道及门牌号">
+                                </div>
+                                <div class="controls-aline">
+                                    <input class="input-span input-width10" type="text" placeholder="联系人">
+                                    <input class="input-span input-width15" type="text" placeholder="电话">
+                                    <div class="inputdateDiv">
+                                        <input class="input-span input-width20 date_picker2" type="text" placeholder="日期选择">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="float-clear"></div>
+                        </div>
+                        <div class="control-group add-uppadding">
+                            <label class="info-control-label minifloat-left">目的地服务</label>
+                            <div class="controls" style="margin-left:20px;padding-top:5px;">
+                                <label class="protariff-info">如产生关税，以Fedex、UPS、DHL、TNT等实际账单为主</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-control">
+                        <div class="info-control-label need-invoice">
+                            <input type="radio" name="exinvoice" id="exinvoice1"><label for="exinvoice1">不需要发票</label>
+                            <input type="radio" name="exinvoice" id="exinvoice2"><label for="exinvoice2">需要发票</label>
+                        </div>
+                    </div>
+                    <div class="info-control add-padding">
+                        <div class="info-control-label">
+                            <div class="exact-equiry" id="exactequirybt"><strong>立即询价</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="float-clear"></div>
+        </div>
+        <div id="footer">
+            <div class="wrapper clearfloat">
+                <div class="left clearfloat">
+                    <img src="css/images/logo-footer.png" alt="" id="logo"/>
+                    <div class="letter">
+                        <div class="company">
+                            <img src="css/images/icon-add.png"/>
+                            <span>浙江省杭州市江干区弘通丁兰商业中心3幢831室</span>
+                        </div>
+                        <div class="telephone">
+                            <img src="css/images/icon-tel.png"/>
+                            <span>400-7117-800</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right clearfloat">
+                    <div class="nav">
+                        <span class="title">联系我们</span>
+                        <ul>
+                            <li><a href="">联系我们</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav">
+                        <span class="title">闪电学堂</span>
+                        <ul>
+                            <li><a href="">外贸基础</a></li>
+                            <li><a href="">电商学堂</a></li>
+                            <li><a href="">操作指南</a></li>
+                            <li><a href="">轻松下载</a></li>
+                            <li><a href="">举手提问</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav">
+                        <span class="title">政策法规</span>
+                        <ul>
+                            <li><a href="">中国政策</a></li>
+                            <li><a href="">海关政策</a></li>
+                            <li><a href="">美国政策</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav">
+                        <span class="title">闪电快讯</span>
+                        <ul>
+                            <li><a href="">行业动态</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav">
+                        <span class="title">关于闪电</span>
+                        <ul>
+                            <li><a href="">闪电简介</a></li>
+                            <li><a href="">合作伙伴</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom">Copyright © 2016 flashman.com.All rights reserved.  ICP:12345678910</div>
+        </div>
+
+        
+    <script>
+        $(function() {   
+            $(".date_picker1").date_input();
+            $(".date_picker2").date_input();    
+        });
+    </script>
+    </body>
+</html>

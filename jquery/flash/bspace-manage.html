@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>闪电侠</title>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+        <meta name="description" content="闪电侠">
+        <meta name="keywords" content="物流">
+        <meta name="author" content="">
+        <link rel="" href="">
+        <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/flash_normal.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+        <script type="text/javascript" src="js/flash_normal.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!--[if lt IE 10]>
+        <noscript>
+            <style>.html5-wrappers{display:none!important;}</style>
+            <div class="ie-noscript-warning">您的浏览器禁用了脚本，请启用脚本!!!
+            </div>
+        </noscript>
+        <script> 
+            $(document).ready(function(){
+                document.getElementById("resetcss").href="css/reset-ie.css";
+            });
+        </script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="web-nav">
+            <div class="web-nav-center">
+                <div class="nav-title">
+                    <img src="css/images/logo-header.png">
+                </div>
+                <div class="nav-menu">
+                    <div class="nav-menu-child1"><a href="index.html" class="newhomeP">首页</a><i></i></div>
+                    <div class="nav-menu-child2" id="person-menu"><a href="" class="newhomeP"></a>
+                        <ul>
+                            <li class="personal_menu">个人中心<img class="personal_pull" src="css/images/btn-pull-n.png"><div class="text_decoration"></div></i></li>
+                            <li><a href="account-info.html">账户设置</a></li>
+                            <li><a href="exact-enquiry.html">精准询价</a></li>
+                            <li><a href="bspace-manage.html">订舱管理</a></li>
+                            <li><a href="goodstrack_query.html">跟踪查询</a></li>
+                            <li><a href="freight_pay.html">运费支付</a></li>
+                            <li>退出登录</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="custom-content">
+            <div class="custom-menu">
+                <div class="member-level">
+                    <img src="css/images/V2.png">
+                    <div>
+                       欢迎您，尊敬的高级会员
+                    </div>
+                </div>
+                <ul>
+                    <a href="account-info.html"><li>账户设置</li></a>
+                    <a href="exact-enquiry.html"><li>精准询价</li></a>
+                    <a href="bspace-manage.html"><li style="background: #737373;border-top:1px solid #fff;color:#fff;">订舱管理</li></a>
+                    <a href="goodstrack_query.html"><li>跟踪查询</li></a>
+                    <a href="freight_pay.html"><li>运费支付</li></a>
+                </ul>
+            </div>
+            <div class="custom-menu-info">
+                <div class="menu-info-tag">
+                    <div class="info-tag border-right" style="background: #737373;color:#fff;" onclick="tagChange(0);">已保存报价</div>
+                    <div class="info-tag border-right" onclick="tagChange(1);">已订舱</div>
+                    <div class="info-tag" onclick="tagChange(2);">地址管理</div>
+                </div>
+                <div class="info-tag-div absoultDiv" style="padding-top:0px;">
+                    <div class="info-control">
+                        <div class="price-search">
+                            <div class="air-tipsdiv input-width20">
+                                <label class="">单号</label>
+                                <input type="text">
+                            </div>
+                            <div class="air-tipsdiv input-width20">
+                                <label class="">类型</label>
+                                <select>
+                                    <option>FBA空运</option>
+                                    <option>FBA海运整柜</option>
+                                    <option>FBA海运散货</option>
+                                    <option>FBA快递</option>
+                                </select>
+                            </div>
+                            <div class="air-tipsdiv input-width20">
+                                <label class="">起运地</label> 
+                                <input type="text">
+                            </div>
+                            <div class="air-tipsdiv input-width20">
+                                <label class="">目的地</label>
+                                <input type="text">
+                            </div>
+                            <div class="submitbt">
+                            立即搜索
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-control info-bk fixedheight1">
+                        <div class="control-group fixedheight2">
+                            <div class="controls" style="padding-left:5px;">
+                                <div class="fee-table">
+                                    <table>
+                                        <thead>
+                                            <th>单号&类型</th>
+                                            <th>起运地信息</th>
+                                            <th class="input-width20">目的地信息</th>
+                                            <th class="input-width20">生成时间</th>
+                                            <th>价格</th>
+                                            <th>操作</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1234567890<br>FBA空运</td>
+                                                <td>DADA</td>
+                                                <td>3-6个工作日</td>
+                                                <td>1860</td>
+                                                <td><p class="p-yellow">1860</p></td>
+                                                <td><div class="table-menu Bookingspacebt">立即订舱</div><a>查看详情</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>DHL</td>
+                                                <td>DADA</td>
+                                                <td>3-6个工作日</td>
+                                                <td>1860</td>
+                                                <td><p class="p-yellow">1860</p></td>
+                                                <td><div class="table-menu Bookingspacebt">立即订舱</div><a>查看详情</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>DHL</td>
+                                                <td>DADA</td>
+                                                <td>3-6个工作日</td>
+                                                <td>1860</td>
+                                                <td><p class="p-yellow">1860</p></td>
+                                                <td><div class="table-menu Bookingspacebt">立即订舱</div><a>查看详情</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><div style="clear:both;"></div>
+                        </div>
+                        <div class="pageCustDiv">
+                            <div class="pageCustTable">
+                                <div class="pagebt"><a id="pagePrev" class="pointering">上一页</a></div>
+                                <div class="pagebt" id="pagebt">
+                                    <a href="#" class="active">1</a>
+                                    <a href="#" class="">2</a>
+                                    <a href="#" class="">3</a>
+                                    <a href="#" class="">4</a>
+                                    <a href="#" class="">5</a>
+                                    <a href="#" class="">6</a>
+                                    <a href="#" class="">7</a>
+                                </div>
+                                <div class="pagebt"><a id="pageNext" class="pointering">下一页</a></div>
+                                <div class="float-clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-control"><label class="info-control-label"></label></div>
+                </div>
+                <div class="info-tag-div" style="display:none;padding-top:0px;" >
+                    <div class="info-control">
+                        <div class="price-search">
+                            <div class="air-tipsdiv input-width20">
+                                <label class="">单号</label>
+                                <input type="text">
+                            </div>
+                            <div class="air-tipsdiv input-width20">
+                                <label class="">类型</label>
+                                <select>
+                                    <option>FBA空运</option>
+                                    <option>FBA海运整柜</option>
+                                    <option>FBA海运散货</option>
+                                    <option>FBA快递</option>
+                                </select>
+                            </div>
+                            <div class="air-tipsdiv input-width20">
+                                <label class="">起运地</label> 
+                                <input type="text">
+                            </div>
+                            <div class="air-tipsdiv input-width20">
+                                <label class="">目的地</label>
+                                <input type="text">
+                            </div>
+                            <div class="submitbt">
+                            立即搜索
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-control info-bk fixedheight1">
+                        <div class="control-group fixedheight2">
+                            <div class="controls" style="padding-left:5px;">
+                                <div class="fee-table">
+                                    <table>
+                                        <thead>
+                                            <th>单号&类型</th>
+                                            <th>起运地信息</th>
+                                            <th class="input-width20">目的地信息</th>
+                                            <th class="input-width20">生成时间</th>
+                                            <th>价格</th>
+                                            <th>操作</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1234567890<br>FBA空运</td>
+                                                <td>DADA</td>
+                                                <td>3-6个工作日</td>
+                                                <td>1860</td>
+                                                <td><p class="p-yellow">1860</p></td>
+                                                <td><div class="table-menu">立即支付</div><a>查看详情</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>DHL</td>
+                                                <td>DADA</td>
+                                                <td>3-6个工作日</td>
+                                                <td>1860</td>
+                                                <td><p class="p-yellow">1860</p></td>
+                                                <td><div class="table-menu">立即支付</div><a>查看详情</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>DHL</td>
+                                                <td>DADA</td>
+                                                <td>3-6个工作日</td>
+                                                <td>1860</td>
+                                                <td><p class="p-yellow">1860</p></td>
+                                                <td><div class="table-menu">立即支付</div><a>查看详情</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><div style="clear:both;"></div>
+                        </div>
+                        <div class="pageCustDiv">
+                            <div class="pageCustTable">
+                                <div class="pagebt"><a id="pagePrev" class="pointering">上一页</a></div>
+                                <div class="pagebt" id="pagebt">
+                                    <a href="#" class="active">1</a>
+                                    <a href="#" class="">2</a>
+                                    <a href="#" class="">3</a>
+                                    <a href="#" class="">4</a>
+                                    <a href="#" class="">5</a>
+                                    <a href="#" class="">6</a>
+                                    <a href="#" class="">7</a>
+                                </div>
+                                <div class="pagebt"><a id="pageNext" class="pointering">下一页</a></div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="info-control"><label class="info-control-label"></label></div> 
+                </div>
+                <div class="info-tag-div" style="display:none;min-height:1000px;padding-top:0px;">
+                    <div class="adress_manage">
+                        <label class="info-control-label minifloat-left">公司名</label>
+                        <div class="controls">
+                            <input class="input-span input-width15" type="text" placeholder="">
+                        </div>
+                        <label class="info-control-label minifloat-left">城市</label>
+                        <div class="controls">
+                            <input class="input-span input-width15" type="text" placeholder="">
+                        </div>
+                        <label class="info-control-label minifloat-left">邮箱</label>
+                        <div class="controls">
+                            <input class="input-span input-width15" type="text" placeholder="">
+                        </div>
+                        <div class="submitbt" style="margin-left:70px;">
+                            立即搜索
+                        </div>
+                        <div class="float-clear"></div>
+                    </div>
+                    <div class="info-control" id="createNewaddress">创建新地址</div>
+                    <div class="adress-managediv">
+                        <div class="adress-manage">
+                            <div class="control-group">
+                                <label>公司名:<i>*</i></label>
+                                <span class="input-width24">中国浙江省杭州市哈哈哈哈哈网络科技</span>
+                                <input type="button" class="input-width4 adress-managealter" value="修改">
+                                <input type="button" class="input-width4 adress-managesave" value="保存" style="display:none;">
+                                <input type="button" class="input-width4 adress-managedele" value="删除">
+                            </div>
+                            <div class="control-group">
+                                <label>地&nbsp;&nbsp;&nbsp;址:<i>*</i></label>
+                                <span class="input-width30">中国浙江省杭州市西湖区留下六合路1234号</span>
+                            </div>
+                            <div class="control-group">
+                                <label>国家/地区:<i>*</i></label>
+                                <span class="input-width30">中国</span>
+                            </div>
+                            <div class="control-group">
+                                <label>州/省:<i>*</i></label>
+                                <span class="input-width10">浙江</span>
+                            </div>
+                            <div class="control-group">
+                                <label>城市:<i>*</i></label>
+                                <span class="input-width10">杭州</span>
+                            </div>
+                            <div class="control-group">
+                                <label>电&nbsp;&nbsp;&nbsp;话:<i>*</i></label>
+                                <span class="input-width30">13165487845</span>
+                            </div>
+                            <div class="control-group">
+                                <label>邮&nbsp;&nbsp;&nbsp;箱:<i>*</i></label>
+                                <span class="input-width30">45689974123@163.com</span>
+                            </div>
+                        </div>
+                        <div class="float-clear"></div>
+                    </div>
+                    <div class="pageCustDiv">
+                            <div class="pageCustTable">
+                                <div class="pagebt"><a id="pagePrev" class="pointering">上一页</a></div>
+                                <div class="pagebt" id="pagebt">
+                                    <a href="#" class="active">1</a>
+                                    <a href="#" class="">2</a>
+                                    <a href="#" class="">3</a>
+                                    <a href="#" class="">4</a>
+                                    <a href="#" class="">5</a>
+                                    <a href="#" class="">6</a>
+                                    <a href="#" class="">7</a>
+                                </div>
+                                <div class="pagebt"><a id="pageNext" class="pointering">下一页</a></div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="float-clear"></div>
+            <div class="tipsMask">
+                <div class="customMasktip">  
+                </div>
+            </div>
+            <div class="customMasktip">
+                <span>恭喜你订舱成功</span>
+                <div class="halfDiv">
+                    <span>您的订舱编号</span>
+                    <span>您的发票号码</span>
+                </div>
+                <div class="halfDiv">
+                    <label></label>
+                </div>
+                <span>订舱编号可用于订单跟踪查询</span>
+                <span><div class="cancelMask">确定</div></span>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="wrapper clearfloat">
+                <div class="left clearfloat">
+                    <img src="css/images/logo-footer.png" alt="" id="logo"/>
+                    <div class="letter">
+                        <div class="company">
+                            <img src="css/images/icon-add.png"/>
+                            <span>浙江省杭州市江干区弘通丁兰商业中心3幢831室</span>
+                        </div>
+                        <div class="telephone">
+                            <img src="css/images/icon-tel.png"/>
+                            <span>400-7117-800</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right clearfloat">
+                    <div class="nav">
+                        <span class="title">联系我们</span>
+                        <ul>
+                            <li><a href="">联系我们</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav">
+                        <span class="title">闪电学堂</span>
+                        <ul>
+                            <li><a href="">外贸基础</a></li>
+                            <li><a href="">电商学堂</a></li>
+                            <li><a href="">操作指南</a></li>
+                            <li><a href="">轻松下载</a></li>
+                            <li><a href="">举手提问</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav">
+                        <span class="title">政策法规</span>
+                        <ul>
+                            <li><a href="">中国政策</a></li>
+                            <li><a href="">海关政策</a></li>
+                            <li><a href="">美国政策</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav">
+                        <span class="title">闪电快讯</span>
+                        <ul>
+                            <li><a href="">行业动态</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav">
+                        <span class="title">关于闪电</span>
+                        <ul>
+                            <li><a href="">闪电简介</a></li>
+                            <li><a href="">合作伙伴</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="bottom">Copyright © 2016 flashman.com.All rights reserved.  ICP:12345678910</div>
+        </div>
+        
+    <script>
+        $(function(){
+            if(GetQueryString('tag') == 3){
+                $('.info-tag-div:first').css({'display':'none'});
+                $('.info-tag:first').css({'background':'#fff','color':'#737373'});
+                $('.info-tag-div:last').css({'display':'block'});
+                $('.info-tag:last').css({'background':'#737373','color':'#fff'});
+            }
+        });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,817 @@
+/*通用样式*/
+.upper{
+    z-index:50;
+}
+.filter{
+    background: gray;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+/**清除浮动***/
+.clearfloat{
+    zoom:1;
+}
+.clearfloat:after{
+    display: block;
+    content: 'clear';
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+/*底部footer样式*/
+#footer{
+    height:270px;
+    width: 100%;
+    background: white;
+    position: relative;
+    margin-top: 30px;
+}
+.wrapper{
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    height:220px;
+}
+#footer .left{
+    float:right;
+    position: absolute;
+    height:140px;
+    right: 0;
+    top:50%;
+    margin-top: -70px;
+}
+#footer .right{
+    float:left;
+}
+.nav{
+    float: right;
+    margin-right: 25px;
+    height: 150px;
+    margin-top: 45px;
+}
+
+#logo{
+    width: 180px;
+    height: 40px;
+}
+#bottom{
+    height:48px;
+    width: 100%;
+    color:white;
+    text-align: center;
+    line-height: 48px;
+    background: #4d4d4d;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.nav span{
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+.nav ul li a{
+    font-size: 14px;
+    color: white;
+    margin-top: 3px;
+    margin-left: 8px;
+}
+.nav ul li a:hover{
+    color: #009dd9;
+}
+.nav ul{
+    margin-top: 10px;
+}#footer .nav .title{
+     color: #353535;
+    font-size: 16px;
+    margin-bottom: 20px;
+ }
+ #footer .nav ul li a{
+     color:#737373;
+     font-size: 13px;
+ }
+#footer .nav ul li a:hover{
+    color: #009dd9;
+}
+#footer .company{
+    width: 180px;
+    height: 42px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#footer .company img{
+    float: left;
+    margin-top: 12px;
+}
+#footer .company span{
+    display: inline-block;
+    float: right;
+    width: 130px;
+    height: 42px;
+    font-size: 12px;
+    color:#737373;
+}
+#footer .telephone img{
+    float: left;
+    margin-top: 6px;
+}
+#footer .telephone span{
+    font-size: 18px;
+    color: #737373;
+    font-family: "Arial BoldMT";
+    font-weight: bold;
+    float: right;
+    width: 130px;
+    height: 42px;
+}
+
+
+/*header导航栏样式*/
+.navMenu .option{
+    float:left;
+    position: relative;
+}
+
+
+.navMenu span{
+    float: left;
+    display: inline-block;
+    height: 30px;
+    text-align: center;
+    color: #737373;
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-right: 1px #737373 solid;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.navMenu ul .option .content{
+    color:#737373;
+    font-size: 16px;
+    display: inline-block;
+    width: 80px;
+    height:80px;
+    text-align: center;
+    line-height: 80px;
+    position: relative;
+    font-weight: bold;
+}
+.navMenu ul .option .content:hover{
+    cursor: pointer;
+}
+#fill{
+    width: 130px;
+    height: 20px;
+    float: left;
+}
+.navMenu .rightMenu li .content{
+    width: 55px;
+}
+.leftMenu .option ul {
+    position: absolute;
+    top:80px;
+    width: 80px;
+    right: 0;
+    display: none;
+    z-index:30;
+    background: #525252;
+}
+.leftMenu .option ul li{
+    height: 30px;
+}
+.leftMenu .option ul li a{
+    display: block;
+    width: 80px;
+    height: 30px;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    line-height: 30px;
+}
+.leftMenu .option ul li a:hover{
+    cursor: pointer;
+    background: #eb4c39;
+}
+.text_decoration2{
+    width: 60px;
+    border: 1px solid white;
+    position: absolute;
+    top: 65px;
+    left: 10px;
+}
+
+
+/*注册页面样式*/
+#register{
+    width:400px;
+    height:400px;
+    background: white;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -200px;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+.title2{
+    width: 350px;
+    height: 50px;
+    color:#ed4c3a;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 1px solid #ed4c3a;
+    margin-left: 25px;
+}
+#register #btn , #login #btn,#forget #btn{
+    width: 300px;
+    height: 40px;
+    border: none;
+    background: #ee4b38;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+
+}
+
+
+
+.choose-phone,.choose-secret,.choose-secret2,.choose-vertify{
+    width: 300px;
+    margin-bottom: 10px;
+    position: relative;
+    height: 45px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 3px;
+
+}
+.choose-phone input,.choose-secret input,.choose-secret2 input{
+    border:1px gray solid;
+    width: 220px;
+    height: 30px;
+    position: absolute;
+    left:60px;
+    top: 50%;
+    margin-top: -15px;
+    color: black;
+    line-height: 30px;
+    outline: none;
+    text-indent: 1em;
+}
+.choose-vertify input{
+    border:1px gray solid;
+    width: 130px;
+    height: 30px;
+    position: absolute;
+    left:60px;
+    top: 50%;
+    margin-top: -15px;
+    color: black;
+    line-height: 30px;
+    outline: none;
+    text-indent: 1em;
+}
+.choose-vertify .transfer{
+    position: absolute;
+    left: 200px;
+    width: 82px;
+    border:none;
+    background: #ee4b38;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-indent: 0em;
+}
+.choose-phone span,.choose-secret span,.choose-secret2 span,.choose-vertify span{
+    position: absolute;
+    left: 0;
+    top: 60%;
+    font-size: 15px;
+    color: #555555;
+    width: 50px;
+    height: 30px;
+    margin-top: -15px;
+}
+
+
+.choose-agree{
+
+    width: 300px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.index{
+    position: absolute;
+    top: 0;
+    right: 7px;
+    width: 15px;
+    height: 15px;
+    background: #019dd8;
+    color: white;
+    text-align: center;
+}
+.choose-vertify .index{
+    right: 103px;
+}
+.choose-phone{
+    margin-top: 35px;
+}
+#protocal a{
+    color:#ee4b38;
+}
+.warn{
+    display: block;
+    color: red;
+    font-size: 12px;
+}
+
+/**登录界面的CSS***/
+#login{
+    width:400px;
+    height:300px;
+    background: white;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -200px;
+    text-align: center;
+    z-index: 1000;
+}
+
+#login .choose-agree span a{
+    margin-left: 50px;
+    color: gray;
+}
+#login .choose-agree span a:hover{
+    cursor: pointer;
+    color: black;
+}
+#login .choose-agree label{
+    color:gray;
+}
+.login_btn{
+    width: 150px;
+    height: 40px;
+    border: 1px solid #ed4c3a;
+    background: white;
+    color: #ed4c3a;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+/**忘记密码界面的CSS*/
+
+#forget{
+    width:400px;
+    height:400px;
+    background: white;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    margin-left: -175px;
+    margin-top: -200px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/*行业动态页面的CSS**/
+.industry_dynamic_img,.brief_introduction_img,.contact_us_img,.policy_img,.flash_class_img{
+    width: 100%;
+    background: lightblue;
+    height: 300px;
+}
+.industry_dynamic_content {
+    width: 1200px;
+    height: 100%;
+    margin: 20px auto;
+    margin-bottom: 30px;
+}
+.industry_dynamic_content h2 a{
+    display: block;
+    color: #009dd9;
+    border-bottom: 5px solid  #009dd9;
+    width: 80px;
+    height: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+.industry_dynamic_content h2 a:hover{
+    cursor: pointer;
+}
+.industry_dynamic_detail{
+    width: 1200px;
+    height:100%;
+    margin-top:30px;
+}
+.industry_dynamic_detail .wrap_content{
+    float: right;
+    width:720px;
+    line-height: 22px;
+    margin-top: 16px;
+}
+.industry_dynamic_detail img{
+    display: inline-block;
+    width: 460px;
+    height: 280px;
+    background: lightgreen;
+    float: left;
+}
+.industry_dynamic_detail .wrap_content h3{
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+.industry_dynamic_detail .wrap_content .introduction{
+    width: 300px;
+    color: gray;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.industry_dynamic_detail .wrap_content .introduction a{
+    color:gray;
+}
+.industry_dynamic_detail .wrap_content .introduction a:hover{
+    color: black;
+}
+.industry_dynamic_detail .wrap_content .introduction .time{
+    float: right;
+}
+.industry_dynamic_detail .wrap_content .content{
+    color: gray;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.industry_dynamic_detail .wrap_content .detail_footer a{
+    color: gray;
+    font-size: 16px;
+}
+.industry_dynamic_detail .wrap_content .detail_footer a:hover{
+    color:black;
+}
+.industry_dynamic_nav{
+    width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+.industry_dynamic_nav ul li{
+    display: inline-block;
+}
+.industry_dynamic_nav ul li a{
+    color:#009dd9;
+    font-size: 16px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+.industry_dynamic_nav ul li a:hover{
+    color: #00455f;
+}
+
+/*闪电简介页面**/
+.brief_introduction_content{
+    width: 1200px;
+    height: 100%;
+    margin: 20px auto;
+}
+.brief_introduction_content ul{
+    margin-bottom: 20px;
+}
+.brief_introduction_content ul li{
+    display: inline-block;
+}
+.brief_introduction_content ul a{
+    color:black;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.brief_introduction_content ul .active11{
+    color: #009dd9;
+    border-bottom: 4px solid #009dd9;
+}
+.brief_introduction_content_show1,.brief_introduction_content_show2{
+    width: 1200px;
+    height: 1200px;
+    background: lightgoldenrodyellow;
+}
+.brief_introduction_content_show2{
+    background: lightseagreen;
+    display: none;
+}
+
+/***行业详情动态页面CSS**/
+.dynamic_detail_content,.policy_detail,.flash_detail,.policy_detail{
+    width: 1200px;
+    height: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.dynamic_detail_content h1,.policy_detail h1,.flash_detail h1{
+    color: black;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.dynamic_detail_content .introduction .title,.policy_detail .introduction .title,.flash_detail .introduction .title{
+    color: gray;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.dynamic_detail_content .introduction .title a,.policy_detail .introduction .title a,.flash_detail .introduction .title a{
+    color: gray;
+    font-size: 16px;
+}
+.dynamic_detail_content .introduction .time,.policy_detail .introduction .time,.flash_detail .introduction .time{
+    color: gray;
+    font-size: 16px;
+}
+.dynamic_detail_content .content,.policy_detail .content,.flash_detail .content{
+    width: 1200px;
+    height: 1200px;
+    background: lightpink;
+    margin-top: 10px;
+}
+/**联系我们页面CSS**/
+.contact_us_content{
+    width: 1200px;
+    height: 100%;
+    margin: 20px auto;
+}
+.contact_us_content ul{
+    margin-bottom: 20px;
+}
+.contact_us_content ul a{
+    color: #009dd9;
+    border-bottom: 4px solid #009dd9;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.contact_us_content .contact_us_show{
+    width: 1200px;
+    height: 1200px;
+    background: lightpink;
+}
+/**政策页面的CSS**/
+.policy_content{
+    width: 1200px;
+    height: 100%;
+    margin: 20px auto;
+}
+.policy_content ul{
+    margin-bottom: 20px;
+}
+.policy_content ul li{
+    display: inline-block;
+}
+.policy_content ul a{
+    color:black;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.policy_content ul .active2{
+    color: #009dd9;
+    border-bottom: 4px solid #009dd9;
+}
+.policy_content_detail{
+    width: 1200px;
+    height:100%;
+    margin-top:30px;
+}
+.policy_content_detail .wrap_content{
+    float: right;
+    width:720px;
+    line-height: 22px;
+    margin-top: 16px;
+}
+.policy_content_detail img{
+    display: inline-block;
+    width: 460px;
+    height: 280px;
+    background: lightgreen;
+    float: left;
+}
+.policy_content_detail .wrap_content h3{
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+.policy_content_detail .wrap_content .introduction{
+    width: 300px;
+    color: gray;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.policy_content_detail .wrap_content .introduction a{
+    color:gray;
+}
+.policy_content_detail .wrap_content .introduction a:hover{
+    color: black;
+}
+.policy_content_detail .wrap_content .introduction .time{
+    float: right;
+}
+.policy_content_detail .wrap_content .content{
+    color: gray;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.policy_content_detail .wrap_content .detail_footer a{
+    color: gray;
+    font-size: 16px;
+}
+.policy_content_detail .wrap_content .detail_footer a:hover{
+    color:black;
+}
+.policy_content_nav{
+    width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+.policy_content_nav ul li{
+    display: inline-block;
+}
+.policy_content_nav ul li a{
+    color:#009dd9;
+    font-size: 16px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+.policy_content_nav ul li a:hover{
+    color: #00455f;
+}
+.total{
+    width: 1200px;
+    height: 100%;
+}
+.policy_china{
+    width: 1200px;
+    height: 100%;
+    display: none;
+}
+.policy_border{
+    width: 1200px;
+    height: 100%;
+    display: none;
+}
+.policy_america{
+    width: 1200px;
+    height: 100%;
+    display: none;
+}
+
+/**电商学堂页面的CSS**/
+.flash_class_content{
+    width: 1200px;
+    height: 100%;
+    margin: 20px auto;
+}
+.flash_class_content ul{
+    margin-bottom: 20px;
+}
+.flash_class_content ul li{
+    display: inline-block;
+}
+.flash_class_content ul a{
+    color:black;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.flash_class_content ul .active3{
+    color: #009dd9;
+    border-bottom: 4px solid #009dd9;
+}
+.flash_class_detail{
+    width: 1200px;
+    height:100%;
+    margin-top:30px;
+}
+.flash_class_detail .wrap_content{
+    float: right;
+    width:720px;
+    line-height: 22px;
+    margin-top: 16px;
+}
+.flash_class_detail img{
+    display: inline-block;
+    width: 460px;
+    height: 280px;
+    background: lightgreen;
+    float: left;
+}
+.flash_class_detail .wrap_content h3{
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+.flash_class_detail .wrap_content .introduction{
+    width: 300px;
+    color: gray;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.flash_class_detail .wrap_content .introduction a{
+    color:gray;
+}
+.flash_class_detail .wrap_content .introduction a:hover{
+    color: black;
+}
+.flash_class_detail .wrap_content .introduction .time{
+    float: right;
+}
+.flash_class_detail .wrap_content .content{
+    color: gray;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.flash_class_detail .wrap_content .detail_footer a{
+    color: gray;
+    font-size: 16px;
+}
+.flash_class_detail .wrap_content .detail_footer a:hover{
+    color:black;
+}
+.flash_class_nav{
+    width: 500px;
+    margin: 20px auto;
+    text-align: center;
+}
+.flash_class_nav ul li{
+    display: inline-block;
+}
+.flash_class_nav ul li a{
+    color:#009dd9;
+    font-size: 16px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+.flash_class_nav ul li a:hover{
+    color: #00455f;
+}
+.flash_class_total{
+    width: 1200px;
+    height: 100%;
+}
+.flash_class_commerce{
+    width: 1200px;
+    height: 100%;
+    display: none;
+}
+.flash_class_operation{
+    width: 1200px;
+    height: 100%;
+    display: none;
+}
+.flash_class_download{
+    width: 1200px;
+    height: 100%;
+    display: none;
+}
+.flash_class_question{
+    width: 1200px;
+    height: 100%;
+    display: none;
+}
+.forget_sure{
+    width: 150px;
+    height: 40px;
+    border: 1px solid #ed4c3a;
+    background: white;
+    color: #ed4c3a;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.nav-menu-child3{
+    width: 60px;
+    height: 80px;
+    line-height: 80px;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 99;
+
+}
