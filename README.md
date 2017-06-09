@@ -23,4 +23,6 @@
 ### 综合实例
 * [购物车](http://MethylDonng.github.io/web/jquery/shop/cart.html)
 * [仿小米官网](http://MethylDonng.github.io/web/jquery/小米/index.html)
+* [快递运输(PC版)](http://MethylDonng.github.io/web/jquery/flash/index.html)
+* [快递运输(移动端)](http://MethylDonng.github.io/web/jquery/flash_moblie/index.html)
 
