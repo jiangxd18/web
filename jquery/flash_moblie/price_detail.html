@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>已保存报价详情</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,width=device-width">
+    <script type="text/javascript">
+        document.getElementsByTagName('html')[0].style.fontSize = (window.screen.width)/10 + 'px';
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/normal.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery-1.12.3.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body style="overflow-x: hidden;">
+    <header class="header">
+        <a href="javascript:;"><img src="css/images/icon-return@3x.png" alt="" class="style_header_return" id="price_return"/></a>
+    </header>
+    <nav class="style_nav style_price_warn">
+        温馨提示：若需要修改货物及服务信息，请重新询价
+    </nav>
+    <section id="freight_title" class="style_title">
+        货物信息
+    </section>
+    <section id="freight_detail">
+        <div class="style_detail_kv" style="margin-top: 0.67rem;">
+            <span class="style_key">起运地</span><!--
+            --><span class="style_value" id="freight_detail_from">深圳</span>
+        </div>
+        <div class="style_detail_kv">
+            <span class="style_key">目的地</span><!--
+            --><span class="style_value" id="freight_detail_to">DFW7 FORT WORTH TX 100564</span>
+        </div>
+        <div class="style_detail_kv">
+            <span class="style_key">类型</span><!--
+            --><span class="style_value" id="freight_detail_type">常规散货</span>
+        </div>
+        <div class="style_detail_kv">
+            <span class="style_key">货物1</span><!--
+            --><span class="style_value">SHOES&nbsp;&nbsp;&nbsp;&nbsp;200KGS&nbsp;&nbsp;&nbsp;&nbsp;60CBM</span>
+        </div>
+        <div class="style_detail_kv">
+            <span class="style_key">货物2</span><!--
+            --><span class="style_value">T-SHIRT&nbsp;&nbsp;&nbsp;&nbsp;400KGS&nbsp;&nbsp;&nbsp;&nbsp;100CBM</span>
+        </div>
+        <div class="style_detail_kv">
+            <span class="style_key" style="width: 1.88rem;">货物打托后</span><!--
+            --><span class="style_value">400KGS&nbsp;&nbsp;&nbsp;&nbsp;100CBM</span>
+        </div>
+    </section>
+    <section id="expense_detail_title" class="style_title">
+        费用明细
+    </section>
+    <section id="expense_detail">
+        <div id="service_expense_title" class="style_service_title">
+            增值服务费用
+        </div><!--
+        --><div id="service_expense_detail" class="style_service_detail">
+            <div class="style_expense_wrapper">
+                <span class="style_expense_name">代理报关费</span>
+                <span class="style_expense_price" id="agent_price">￥500</span>
+            </div>
+            <div class="clearfloat"></div>
+            <div class="style_expense_wrapper">
+                <span class="style_expense_name">代理清关费</span>
+                <span class="style_expense_price" id="clearance_price">￥1500</span>
+            </div>
+            <div class="clearfloat"></div>
+            <div class="style_expense_wrapper">
+                <span class="style_expense_name">出口许可权买单费</span>
+                <span class="style_expense_price" id="export_price">￥600</span>
+            </div>
+            <div class="clearfloat"></div>
+            <div class="style_expense_wrapper">
+                <span class="style_expense_name">代打托盘费</span>
+                <span class="style_expense_price" id="replace_price">￥1520</span>
+             </div>
+            <div class="clearfloat"></div>
+            <div class="style_separator"></div>
+            <div class="style_expense_wrapper">
+                <span class="style_expense_price" id="service_total_price">￥1520</span>
+                <span class="style_expense_price">小计&nbsp;&nbsp;&nbsp;</span>
+            </div>
+        </div>
+        <div id="air_expense_title" class="style_service_title" style="margin-top: 0.13rem">
+            航运费用
+        </div><!--
+        --><div id="air_expense_detail" class="style_service_detail" style="margin-top: 0.13rem">
+            <div class="style_expense_wrapper">
+                <span class="style_expense_name">起运地到目的地</span>
+                <span class="style_expense_price" id="from_to_price">￥5600</span>
+            </div>
+            <div class="clearfloat"></div>
+            <div class="style_separator"></div>
+            <div class="style_expense_wrapper">
+                <span class="style_expense_price" id="air_total_price">￥5600</span>
+                <span class="style_expense_price">小计&nbsp;&nbsp;&nbsp;</span>
+            </div>
+        </div>
+        <div id="other_expense_title" class="style_service_title" style="margin-top: 0.13rem">
+            其他费用
+        </div><!--
+        --><div id="other_expense_detail" class="style_service_detail" style="margin-top: 0.13rem">
+            <div class="style_expense_wrapper">
+                <span class="style_expense_name">新增费用1</span>
+                <span class="style_expense_price" >￥500</span>
+            </div>
+            <div class="clearfloat"></div>
+            <div class="style_expense_wrapper">
+                <span class="style_expense_name">新增费用2</span>
+                <span class="style_expense_price" >￥300</span>
+            </div>
+            <div class="clearfloat"></div>
+            <div class="style_separator"></div>
+            <div class="style_expense_wrapper">
+                <span class="style_expense_price" id="other_total_price">￥800</span>
+                <span class="style_expense_price">小计&nbsp;&nbsp;&nbsp;</span>
+            </div>
+        </div>
+        <div id="total_expense">
+            总计费用：<span id="total_price">￥9381</span>
+        </div>
+        <div id="price_detail_warn">
+            *最终订单费用以客服核对后费用为准
+        </div>
+    </section>
+    <section id="waybill_title" class="style_title">
+        提单各方
+    </section>
+    <section style="margin-bottom:1.73rem;">
+        <ul id="waybill_detail">
+            <li class="style_waybill_wrapper">
+                <span class="style_waybill_name">发货人选择</span><!--
+                --><a href="javascript:;" class="style_waybill_a" id="waybill_sender">深圳某某某公司</a>
+            </li>
+            <li class="style_waybill_wrapper">
+                <span class="style_waybill_name">收货人选择</span><!--
+                --><a href="javascript:;" class="style_waybill_a" id="waybill_receiver">浙江某某某科技公司</a>
+            </li>
+            <li class="style_waybill_wrapper">
+                <span class="style_waybill_name">通知人选择</span><!--
+                --><a href="javascript:;" class="style_waybill_a" id="waybill_informer">浙江某某某科技公司</a>
+            </li>
+        </ul>
+        <div id="waybill_radio_wrapper">
+            <img src="css/images/btn-radio-n@3x.png" id="waybill_radio"/><label id="waybill_radio_warn" for="waybill_radio">同收货人</label>
+            <input type="radio" id="replace_radio"/>
+            <div class="clearfloat"></div>
+        </div>
+        <div class="clearfloat"></div>
+    </section>
+    <section id="marks_title" class="style_title">
+        唛头上传
+    </section>
+    <section>
+        <div id="marks_name">
+            <span>昵称</span><!--去除inline-block之间的空隙
+            --><input type="text" id="marks_name_text" placeholder="请输入唛头名称"/>
+        </div>
+        <div id="marks_detail">
+            <img src="css/images/img-head@3x.png" alt="" id="marks_head"/>
+            <input type="button" value="选择文件" id="marks_choose"/>
+            <input type="button" value="上传" id="marks_transmit"/>
+            <input type="text" disabled="disabled" id="marks_pic_address"/>
+            <input type="file" id="replace_marks_text"/>
+        </div>
+        <div class="clearfloat"></div>
+    </section>
+    <div class="clearfloat"></div>
+    <input type="button" value="提交" id="price_btn" class="style_loginbtn"/>
+</body>
+</html>

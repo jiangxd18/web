@@ -1,0 +1,902 @@
+/**通用样式**/
+/**清除浮动**/
+.clearfloat{
+    zoom: 1;
+}
+.clearfloat:after{
+    clear: both;
+    content: '.';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+/**placeholder颜色值改变**/
+input::-webkit-input-placeholder{
+    color: #b1b1b1;
+}
+input:-moz-placeholder{
+    color: #b1b1b1;
+}
+input::-moz-placeholder{
+    color: #b1b1b1;
+}
+input:-ms-input-placeholder{
+    color: #b1b1b1;
+}
+
+/**登录界面、注册界面、密码重置界面一个span + input输入框的样式**/
+.style_si{
+    width: 8.4rem;
+    margin: 0 auto;
+}
+.style_si span{
+    display: inline-block;
+    width: 2.4rem;
+    height: 0.8rem;
+    color: #737373;
+    line-height: 0.8rem;
+    text-align: left;
+    font-size: 0.4rem;
+}
+.style_si input{
+    display: inline-block;
+    border-bottom: 1px solid #b1b1b1;
+    width: 6rem;
+    height: 0.8rem;
+    background:#f5f5f5;
+    color: #737373;
+    font-size: 0.4rem;
+}
+/**登录页面的两个按钮**/
+.style_loginbtn{
+    display: block;
+    border: 2px solid #ec4d3a;
+    border-radius: 0.2rem;
+    text-align: center;
+    height: 1.52rem;
+    width: 8.37rem;
+    background:#f5f5f5;
+    color: #ec4d3a;
+    font-size: 0.43rem;
+    margin: 0 auto;
+}
+
+/**登录、注册、密码重置页面的头部欢迎部分**/
+.style_welcome{
+    width:8.4rem;
+    border-bottom: 1px solid red;
+    margin: 0 auto;
+    background: #f5f5f5;
+}
+.style_welcome img{
+    display: block;
+    width: 1.68rem;
+    height: 1.68rem;
+    padding-top: 0.67rem;
+    padding-bottom: 0.47rem;
+    margin: 0 auto;
+}
+.style_welcome h1{
+    font-size: 0.48rem;
+    color: #353535;
+    padding-bottom: 0.93rem;
+    text-align: center;
+    width: 100%;
+}
+/**获取验证码按钮的样式**/
+.style_captcha{
+    padding: 0;
+    width: 2.2rem;
+    height:1rem;
+    border: 1px solid #ec4d3a;
+    color: #ec4d3a;
+    font-size:0.3rem;
+    line-height: 1rem;
+    border-radius: 0.15rem;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+/**头部返回按钮+标题通用样式**/
+.header{
+    height: 1.17rem;
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #f5f5f5;
+}
+.style_header_return{
+    width: 0.56rem;
+    height: 0.56rem;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.28rem;
+    left: 0.32rem;
+}
+.header h1{
+    display: inline-block;
+    font-size: 0.48rem;
+    color: #353535;
+    line-height: 1.17rem;
+    width: 2rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -1rem;
+    height: 1.17rem;
+}
+.style_search{
+    width: 6.266rem;
+    height: 0.746rem;
+    border: none;
+    border-bottom: 1px solid #ec4d3a !important;
+    font-size: 0.32rem;
+    background: url("images/icon-search@3x.png") no-repeat left;
+    background-size: 0.56rem 0.56rem;
+    position: absolute;
+    left: 1.4rem;
+    top: 0.173rem;
+    text-indent: 2em;
+    color: #353535;
+}
+.style_search_btn{
+    background: #ec4d3a;
+    width: 1.867rem;
+    height: 0.746rem;
+    color: #fff;
+    text-align: center;
+    text-indent: 0;
+    line-height: 0.746rem;
+    border: none;
+    border-radius:4px;
+    position: absolute;
+    right: 0.32rem;
+    top: 0.173rem;
+    font-size:0.32rem;
+}
+
+/**分隔条的通用样式**/
+.style_header_separate{
+    width: 100%;
+    height: 0.2rem;
+    background: #f5f5f5;
+}
+
+/**标题的通用样式**/
+.style_title{
+    color: #353535;
+    font-size: 0.48rem;
+    border-bottom: 3px solid #737373;
+    width:8.4rem;
+    margin:0 auto;
+    padding-bottom:0.13rem;
+}
+/**账号信息通用css**/
+.style_account{
+    display: inline-block;
+}
+.style_account span{
+    font-size: 0.4rem;
+    color: #737373;
+}
+.style_account input{
+    border: none;
+    border-bottom: 1px solid #b1b1b1;
+    color: #353535;
+    padding-bottom: 0.12rem;
+    font-size: 0.42rem;
+    height: 0.8rem;
+    margin-top: 0.53rem;
+}
+/**导航通用样式**/
+.style_nav{
+    height: 1.13rem;
+    width: 100%;
+    border-bottom: 1px solid #b1b1b1;
+    position: relative;
+}
+.style_nav_li{
+    display: inline-block;
+    height: 1.08rem;
+    line-height: 1.08rem;
+    color: #737373;
+    font-size: 0.35rem;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 3px solid #fff;
+}
+.about_active{
+    border-bottom: 3px solid #ed4c3a;
+    color: #ed4c3a;
+}
+
+/**标题图片通用样式**/
+.style_img_title{
+    margin-top: 0.4rem;
+    margin-left: 0.32rem;
+}
+.style_img_title img{
+    width: 9.36rem;
+    height:4.67rem;
+}
+
+/**内容通用样式**/
+.style_content{
+    color: #353535;
+    margin-top: 0.67rem;
+    margin-left: 0.32rem;
+    font-size: 0.35rem;
+    line-height: 0.51rem;
+}
+
+/**闪电学堂通用样式**/
+.school_content{
+    margin-top: 0.4rem;
+    margin-bottom: 0.267rem;
+}
+.school_content img{
+    width:3.2rem;
+    height: 2.13rem;
+    float: left;
+    margin-left: 0.32rem;
+}
+.school_content_detail{
+    display: inline-block;
+    float: left;
+    width: 5.687rem;
+    margin-left: 0.267rem;
+    position: relative;
+}
+.content_detail_title{
+    font-size: 0.4rem;
+    color: #353535;
+    margin-bottom: 0.08rem;
+}
+.content_detail_FT{
+    font-size: 0.3rem;
+    color: #737373;
+    margin-bottom: 0.08rem;
+}
+.content_detail{
+    font-size: 0.373rem;
+    color: #353535;
+}
+.content_detail_more{
+    position: absolute;
+    bottom: 0;
+    right: 0.64rem;
+    font-size: 0.3rem;
+    color: #737373;
+}
+.FT_from{
+    margin-right: 0.347rem;
+}
+
+/**电商学堂详情页面通用css**/
+.detail_title{
+    font-size: 0.48rem;
+    color: #353535;
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+}
+
+/**已报价详情css**/
+.style_price_warn{
+    font-size: 0.347rem;
+    color: #737373;
+    text-align: center;
+    line-height: 1.13rem;
+}
+.style_detail_kv{
+    margin-left: 0.8rem;
+    font-size: 0.373rem;
+    margin-bottom: 0.4rem;
+}
+.style_key{
+    display: inline-block;
+    width:1.39rem ;
+    color: #737373;
+    margin-right: 0.267rem;
+}
+.style_value{
+    color: #353535;
+}
+.style_service_title{
+    color: #737373;
+    font-size: 0.373rem;
+    width: 2.7rem;
+    display: inline-block;
+    vertical-align: top;
+}
+.style_service_title h1{
+    font-size: 0.373rem;
+}
+.style_service_detail{
+    width: 5.65rem;
+    display: inline-block;
+    font-size: 0.373rem;
+    vertical-align: top;
+}
+.style_expense_name{
+    color: #353535;
+    float: left;
+    margin-bottom: 0.3rem;
+}
+.style_expense_price{
+    color: #ec4d3a;
+    float: right;
+    margin-bottom: 0.3rem;
+}
+.style_expense_wrapper{
+    margin-bottom: 0.3rem;
+}
+.style_separator{
+    border-bottom: 1px solid #ec4d3a;
+    margin-bottom:0.267rem;
+}
+.style_waybill_wrapper{
+    margin-left: 0.8rem;
+}
+.style_waybill_name{
+    color:#737373;
+    font-size: 0.373rem;
+    display: inline-block;
+    vertical-align: top;
+    width: 2.13rem;
+}
+.style_waybill_a{
+    display: inline-block;
+    width:5.65rem;
+    color: #353535;
+    font-size: 0.373rem;
+    vertical-align: top;
+    background: url("images/icon-next@3x.png") no-repeat right;
+    margin-bottom: 1.2rem;
+}
+
+/**地址管理页面通用css**/
+.style_address_li{
+    color: #353535;
+    font-size:0.373rem;
+    border-bottom: 1px solid #f5f5f5;
+    position: relative;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    padding-left: 0.33rem;
+}
+.address_company{
+    background: #fff;
+    width:7.8rem;
+    color: #353535;
+    font-size: 0.373rem;
+}
+.address_name{
+    background: #fff;
+    width:7.8rem;
+    color: #353535;
+    font-size: 0.373rem;
+}
+.address_country{
+    background: #fff;
+    width:2.8rem;
+    color: #353535;
+    font-size: 0.373rem;
+}
+.address_province{
+    background: #fff;
+    width: 3.6rem;
+    color: #353535;
+    font-size: 0.373rem;
+}
+.address_tel{
+    background: #fff;
+    width:7.8rem;
+    color: #353535;
+    font-size: 0.373rem;
+}
+.address_mail{
+    background: #fff;
+    width:7.8rem;
+    color: #353535;
+    font-size: 0.373rem;
+}
+.address_city{
+    background: #fff;
+    width:7.8rem;
+    color: #353535;
+    font-size: 0.373rem;
+}
+.style_address_btn{
+    border: 1px solid #ed4c3a;
+    color: #353535;
+    border-radius:5px;
+    font-size:0.293rem;
+    text-align: center;
+    width: 1.6rem;
+    height: 0.64rem;
+    background: #fff;
+    text-indent: 0;
+}
+.address_separate{
+    margin-bottom: 0.2rem;
+}
+.address_none{
+    border-bottom: none !important;
+}
+.address_edit{
+    margin-left: 5rem;
+    margin-top: 0.2rem;
+}
+.address_del{
+    margin-left: 0.7rem;
+}
+.default_li{
+    border-bottom: 1px solid #737373 !important;
+}
+.default_address{
+   color: #ec4d3a;
+    margin-bottom: 0.2rem;
+}
+
+/**通用样式结束**/
+
+/**登录界面css**/
+#login_wrapper{
+    width: 100%;
+    background: #f5f5f5;
+}
+#login_tel{
+    padding-top: 0.93rem;
+}
+#login_secret{
+    padding-top: 0.6rem;
+}
+#login_other{
+    width: 6rem;
+    padding-left: 3.2rem;
+}
+#login_other img{
+    display: inline-block;
+    width: 0.53rem;
+    height: 0.53rem;
+    float: left;
+    margin-top: 0.67rem;
+    margin-bottom: 1.87rem;
+}
+#login_other label{
+    display: inline-block;
+    font-size: 0.4rem;
+    color: #737373;
+    margin-top: 0.67rem;
+    margin-left: 0.4rem;
+    float: left;
+}
+#login_other a{
+    font-size: 0.4rem;
+    float: right;
+    color: #737373;
+    margin-top: 0.67rem;
+}
+#login_btn_group{
+    padding-bottom: 1.79rem;
+}
+#login_btn{
+    margin-bottom: 0.67rem;
+}
+/**注册页面css**/
+#register_wrapper{
+    width: 100%;
+    background: #f5f5f5;
+    padding-bottom: 1.84rem;
+}
+#register_tel{
+    padding-top: 0.93rem;
+}
+#register_secret{
+    padding-top: 0.6rem;
+}
+#register_resecret{
+    padding-top: 0.6rem;
+}
+#register_captcha{
+    padding-top: 0.6rem;
+    position: relative;
+}
+#register_captcha_btn{
+    position: absolute;
+    right: 0;
+    bottom: 0.1rem;
+}
+#register_other{
+    padding-left: 3.2rem;
+}
+#register_other img{
+    display: inline-block;
+    width: 0.53rem;
+    height: 0.53rem;
+    float: left;
+    margin-top: 0.67rem;
+}
+#register_other label{
+    display: inline-block;
+    font-size: 0.4rem;
+    color: #737373;
+    float: left;
+    margin-top: 0.67rem;
+    margin-left: 0.4rem;
+}
+#register_other label a{
+    color: #ea4d3c;
+}
+#register_btn{
+    margin-top: 1.2rem;
+}
+
+/**忘记密码界面css**/
+#forget_wrapper{
+    width: 100%;
+    background:#f5f5f5;
+    padding-bottom: 1.83rem;
+}
+#forget_tel{
+    padding-top: 0.93rem;
+}
+#forget_secret{
+    padding-top: 0.6rem;
+}
+#forget_resecret{
+    padding-top: 0.6rem;
+}
+#forget_captcha{
+    position: relative;
+    padding-top: 0.6rem;
+}
+#forget_captcha_btn{
+    position: absolute;
+    right: 0;
+    bottom: 0.1rem;
+}
+#forget_btn{
+    margin-top: 2.4rem;
+}
+
+/**修改密码界面CSS**/
+#modify_title{
+    margin-top: 0.8rem;
+}
+#modify_presecret{
+    padding-top: 0.8rem;
+}
+#modify_newsecret{
+    padding-top: 1.33rem;
+}
+#modify_renewsecret{
+    padding-top: 1.33rem;
+}
+#modify_btn{
+    margin-top: 2.8rem;
+}
+/**退出登录界面css**/
+#exist_info{
+    padding-top: 0.67rem;
+    text-align: center;
+}
+#exist_account{
+    font-size:0.48rem;
+    color: #353535;
+    font-weight: bold;
+}
+#exist_account_info{
+    padding-top: 0.4rem;
+}
+#exist_account_pic{
+    width: 0.93rem;
+    height: 0.93rem;
+    margin-right: 0.4rem;
+}
+#exist_info_right{
+    display: inline-block;
+    text-align: left;
+}
+#exist_info_right h2{
+    font-size: 0.4rem;
+    color: #353535;
+    margin-bottom: 0.2rem;
+}
+#exist_info_level{
+    color: #ec4d3a;
+}
+#exist_info_droit{
+    display: block;
+    font-size: 0.32rem;
+    color: #747474;
+}
+#exist_btn{
+    margin-top: 5.88rem;
+}
+#exist_close_btn{
+    margin-top: 0.93rem;
+}
+/**账户信息css**/
+#account_title{
+    margin-top: 0.8rem;
+}
+#account_secname{
+    margin-left: 0.8rem;
+}
+#account_secname span{
+    margin-right: 0.6rem;
+}
+#account_secname input{
+    width: 2.67rem;
+}
+#account_firname{
+    margin-left: 0.8rem;
+}
+#account_firname span{
+    margin-right: 0.6rem;
+}
+#account_firname input{
+    width: 2.93rem;
+}
+#account_country{
+    margin-left: 0.8rem;
+}
+#account_country span{
+    margin-right: 0.21rem;
+}
+#account_country input{
+    width: 2.67rem;
+}
+#account_state{
+    margin-left: 0.8rem;
+}
+#account_state span{
+    margin-right: 0.21rem;
+}
+#account_state input{
+    width: 2.75rem;
+}
+#account_city{
+    margin-left: 0.8rem;
+}
+#account_city span{
+    margin-right: 0.21rem;
+}
+#account_city_text{
+    width: 7.45rem;
+}
+#account_address,#account_company{
+    display: block;
+    margin-left: 0.8rem;
+}
+#account_address span,#account_company span{
+    margin-right:0.21rem;
+}
+#account_address input,#account_company input{
+    width: 7.44rem;
+}
+#account_post,#account_mail{
+    margin-left: 0.8rem;
+}
+#account_post span,#account_mail span{
+    margin-right: 0.21rem;
+}
+#account_post input,#account_mail input{
+    width: 2.67rem;
+}
+#account_tel,#account_cell{
+    margin-left: 0.8rem;
+}
+#account_tel span,#account_cell span{
+    margin-right: 0.21rem;
+}
+#account_tel input,#account_cell input{
+    width: 3rem;
+}
+#account_number{
+    margin-left: 0.8rem;
+}
+#account_number span{
+    margin-right: 0.21rem;
+}
+#account_number input{
+    width: 4.92rem;
+}
+#account_btn{
+    background: #fff;
+    display: block;
+    text-align: center;
+    line-height: 1.52rem;
+    margin-top: 1.73rem;
+    margin-bottom: 1.8rem;
+}
+
+/**关于闪电CSS**/
+#about_flash{
+    left: 2.2rem;
+}
+#cooperation{
+    right: 2.2rem;
+}
+
+/**闪电学堂css样式**/
+#school_commerce{left: 0.53rem;}
+#school_class{left: 2.43rem;}
+#school_manual{left: 4.33rem;}
+#school_download{left: 6.23rem;}
+#school_question{left: 8.13rem;}
+
+/**闪电详情页面的CSS**/
+#school_detail_title{
+    margin-left: 0.8rem;
+    margin-top: 0.267rem;
+    margin-bottom:0.267rem;
+}
+
+/**已保存报价详情页面css**/
+#freight_title{
+    margin-top: 0.93rem;
+}
+#expense_detail_title{
+    margin-top: 1.2rem;
+}
+#expense_detail{
+    margin-left: 0.8rem;
+}
+#expense_detail{
+    margin-top:0.6rem;
+}
+#total_expense{
+    width: 8.4rem;
+    margin-top: 0.13rem;
+    padding-top: 0.33rem;
+    border-top: 2px solid #ec4d3a;
+    color:#ec4d3a;
+    font-size:0.4rem;
+    text-align: right;
+    margin-bottom: 0.333rem;
+}
+#price_detail_warn{
+    width: 8.4rem;
+    text-align: center;
+    color: #737373;
+    font-size: 0.293rem;
+}
+#waybill_title{
+    margin-top: 1.33rem;
+    margin-bottom: 0.93rem;
+}
+#waybill_radio{
+    width: 0.373333rem;
+    height: 0.37333rem;
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+}
+#waybill_radio_warn{
+    font-size: 0.373rem;
+    color: #353535;
+    position: absolute;
+    left: 0.6rem;
+}
+#waybill_radio_wrapper{
+    margin-top:-0.67rem;
+    margin-left: 0.8rem;
+    position: relative;
+}
+#replace_radio{
+    width: 0.37333rem;
+    height: 0.37333rem;
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    z-index: 50;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+}
+#marks_title{
+}
+#marks_name{
+    margin-left: 0.8rem;
+    margin-bottom: 1.133rem;
+}
+#marks_name span{
+    color: #737373;
+    font-size: 0.3733rem;
+    margin-right: 0.267rem;
+}
+#marks_name_text{
+    width: 7.3rem;
+    color: #353535;
+    font-size: 0.3733rem;
+    text-indent: 1em;
+    padding-bottom: 0.2rem;
+}
+#marks_detail{
+    margin-left: 0.8rem;
+    position: relative;
+}
+#marks_head{
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#marks_choose{
+    background: #fff;
+    border: 1px #ed4c3a solid;
+    width: 2.133rem;
+    height: 0.746rem;
+    color:#ed4c3a;
+    text-align: center;
+    line-height: 0.746rem;
+    border-radius: 5px;
+    position: absolute;
+    left: 2.4rem;
+    top: 0;
+    text-indent: 0;
+}
+#marks_transmit{
+    background: #737373;
+    color: #fff;
+    width: 2.133rem;
+    height: 0.746rem;
+    text-align: center;
+    line-height: 0.746rem;
+    border-radius: 5px;
+    border: 1px solid #737373;
+    position: absolute;
+    left:6.266rem;
+    top: 0;
+    text-indent: 0;
+}
+#marks_pic_address{
+    width: 6rem;
+    height: 0.8rem;
+    position: absolute;
+    left: 2.4rem;
+    top: 0.8rem;
+    background: #fff;
+}
+#replace_marks_text{
+    position: absolute;
+    width: 2.133rem;
+    height: 0.746rem;
+    left: 2rem;
+    z-index: 50;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+}
+
+#price_btn{
+    margin-top: 3.5rem;
+    background: #fff;
+}
+#address_btn_wrapper{
+    width: 100%;
+    border-bottom: 1px solid #b1b1b1;
+}
+#address_create{
+    background: #fff;
+    width: 4.267rem;
+    margin-left: 0.8rem;
+    margin-top:0.667rem;
+    margin-bottom: 0.4rem;
+    text-indent: 0;
+}
+
+/**地址管理页面css**/
+#address_detail_ul{
+    margin-top:0.4rem;
+    margin-left: 0.33rem;
+}
+
+#waybill_detail_ul{
+    margin-top: 0.5rem;
+}

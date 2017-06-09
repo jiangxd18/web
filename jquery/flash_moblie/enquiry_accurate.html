@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>精准询价</title>
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,width=device-width">
+		<meta name="description" content="物流,快递,航运,海运,亚马逊">
+		<meta name="keywords" content="物流,快递,航运,海运,亚马逊">
+		<script type="text/javascript">
+			document.getElementsByTagName('html')[0].style.fontSize = (window.screen.width)/10 + 'px';
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/normal.css">
+		<link rel="stylesheet" type="text/css" href="css/DateTimePicker.css">
+		<script type="text/javascript" src="js/jquery-1.12.3.js"></script>
+		<script type="text/javascript" src="js/DateTimePicker.js"></script>
+		<script type="text/javascript" src="js/normal.js"></script>
+	</head>
+	<body>
+		<header class="header">
+        	<a><img src="css/images/icon-return@3x.png" alt="" class="style_header_return"/></a>
+        	<h1>精准询价</h1>
+    	</header>
+    	<section>
+    		<div class="bspace_tab">
+    			<ul>
+    				<li class="bspace_tab_li">
+    					<input type="radio" checked name="tabs" id="tab1">
+                      	<label class="tabs_label" for="tab1">FBA空运</label>
+                      	<div id="tab_content1" class="tab_content">
+                      		<div class="page_before">
+                      		<div class="enquiry_title c_dark p_t2">
+                      			<span>货物信息</span>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>起运地</span>
+                      			<div class="diy_select">
+                      				<input class="input_span diy_select_input" type="text" />
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>目的地</span>
+                      			<input class="input_span" type="text" placeholder="FBA编码" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<div class="diy_select">
+                      				<input class="input_span diy_select_input" type="text" placeholder="城市" />
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="邮编" />
+                      		</div>
+                      		<div class="control_group_inline">
+                      			<span>货物类型</span>
+                      			<div class="group_inline_div">
+                      			<div class="diy_radio">
+                      				<img class="product_type_img1" src="css/images/btn-radio-s@3x.png"><input type="radio" name="product_type" class="product_type1" checked="checked" /><label for="product_type1" class="diy_radio_label1" style="color:#353535;">无托散货</label><br>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<div class="diy_radio_tips p_t6 c_grey1"></div>
+                      			<div class="diy_radio">
+                      				<img class="product_type_img2" class="diy_radio" src="css/images/btn-radio-n@3x.png"><input type="radio" name="product_type" class="product_type2"/><label for="product_type2" class="diy_radio_label2">有托盘</label>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<div class="diy_radio_tips p_t6 c_grey1"><div class="f_tips1">托盘+货物尺寸不得超过100*120*210CM，<br>重量不得超过500KG</div></div>
+                      			<div class="diy_radio_tips p_t6 c_grey1"></div>
+                      			<div class="diy_radio">
+                      				<img class="product_type_img3" class="diy_radio" src="css/images/btn-radio-n@3x.png"><input type="radio" name="product_type" class="product_type3"/><label for="product_type3" class="diy_radio_label3">超大/超重货物</label>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<div class="diy_radio_tips p_t6 c_grey1"><div class="f_tips2">a.单件货物重量超过36kg<br>b.长、宽或高超过60cm</div></div>
+                      			</div>
+                      		</div>
+                      		<div class="enquiry_goods">
+                      			<div class="control_group">
+                      				<span>货物1</span>
+                      				<input class="input_span" type="text" placeholder="中文描述" />
+                      			</div>
+                      			<div class="control_group">
+                      				<span></span>
+                      				<input class="input_span" type="text" placeholder="英文描述" />
+                      			</div>
+                      			<div class="control_group">
+                      				<span></span>
+                      				<input class="input_span" type="text" placeholder="产品型号" />
+                      			</div>
+                      			<div class="control_group">
+                      				<span></span>
+                      				<input class="input_span" type="text" placeholder="箱数" />
+                      			</div>
+                      			<div class="control_group">
+                      				<span></span>
+                      				<input class="input_span2" type="text" placeholder="货物毛重" />
+                      				<div class="diy_select">
+                      					<input class="input_span3 diy_select_input" type="text" placeholder="KGS"/>
+                      					<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      					<div class="diy_select_hiden">
+                      						<ul>
+                      							<li>1</li>
+                      							<li>2</li>
+                      							<li>3</li>
+                      							<li>4</li>
+                      							<li>3</li>
+                      							<li>4</li>
+                      						</ul>
+                      					</div>
+                      				</div>
+                      			</div>
+                      			<div class="control_group">
+                      				<span></span>
+                      				<input class="input_span2" type="text" placeholder="货物体积" />
+                      				<div class="diy_select">
+                      					<input class="input_span3 diy_select_input" type="text" placeholder="CBM"/>
+                      					<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      					<div class="diy_select_hiden">
+                      						<ul>
+                      							<li>1</li>
+                      							<li>2</li>
+                      							<li>3</li>
+                      							<li>4</li>
+                      							<li>3</li>
+                      							<li>4</li>
+                      						</ul>
+                      					</div>
+                      				</div>
+                      			</div>
+                      			<div class="control_group">
+                      				<span></span>
+                      				<input class="input_span" type="text" placeholder="报关单价(￥)" />
+                      			</div>
+                      			<div class="control_group">
+                      				<span></span>
+                      				<input class="input_span" type="text" placeholder="PCS数" />
+                      			</div>
+                      			<div class="control_group">
+                      				<span></span>
+                      				<input class="input_span" type="text" placeholder="报关总价(￥)" />
+                      			</div>
+                      		</div>
+                      		<div class="control_group addmargin_top44">
+                      			<div id="add-goods" class="btn1 p_t2 c_dark add-goods1">+ 添加货物</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>总信息</span>
+                      			<input class="input_span2" type="text" placeholder="货物总毛重" />
+                      			<div class="diy_select">
+                      				<input class="input_span3 diy_select_input" type="text" placeholder="KG"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span2" type="text" placeholder="货物总毛体积" />
+                      			<div class="diy_select">
+                      				<input class="input_span3 diy_select_input" type="text" placeholder="CBM"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+            				<a class="abtn_next btn10">下一步</a>
+            				</div>
+            				<div class="page_after">
+            					<div class="enquiry_title c_dark p_t2">
+                      				<span>增值服务</span>
+                      			</div>
+                      			<div class="control_group">
+                      				<div class="destination_serve_span1">起运地服务</div>
+                      				<div class="startsite_serve">
+                      					<img src="css/images/btn-multiple-s@3x.png" class="fleft startsite_serve1">
+                      					<input type="checkbox" class="site_serve1" checked="checked">
+                      					<label for="site_serve1" class="fleft site_serve1_label" style="color:#353535;">代理报关</label>
+                      					<label for="site_serve2" class="fright site_serve2_label" style="color:#353535;">代打托盘</label>
+                      					<img src="css/images/btn-multiple-s@3x.png" class="fright startsite_serve2">
+                      					<input type="checkbox" class="site_serve2" checked="checked">
+                      					<div class="cl"></div>
+                      				</div>
+                      			</div>
+                      			<div class="export_right">
+                      				<div class="export_right_div1">
+                      					<img src="css/images/btn-radio-s@3x.png" class="export_right1">
+                      					<input type="radio" class="export1" checked="checked" name="export_right_radio">
+                      					<label for="export1" class="export1_label">有出口许可权</label>
+                      					<div class="cl"></div>
+                      				</div>
+                      				<div class="export_right_div2">
+                      					<img src="css/images/btn-radio-n@3x.png" class="export_right2">
+                      					<label for="export2" class="export2_label">没有出口许可权</label>
+                      					<div class="cl"></div>
+                      					<input type="radio" class="export2" name="export_right_radio">
+                      					<span></span>
+                      				</div>
+                      			</div>
+                      			<div class="control_group">
+                      				<div class="destination_serve_span2">目的地服务</div>
+                      				<div class="destination_serve">
+                      					<img class="destination_serveimg" src="css/images/btn-multiple-s@3x.png">
+                      					<label for="destination_check" class="fleft destination_label" style="color:#353535;">代理清关</label>
+                      					<div class="cl"></div>
+                      					<input type="checkbox" class="destination_check" checked="checked">
+                      					<span></span>
+                      				</div>
+                      			</div>
+                      			<div class="enquiry_goods_goods">
+                      				<div class="control_group">
+                      					<span>货物1</span>
+                      					<input class="input_span" type="text" placeholder="英文描述" />
+                      				</div>
+                      				<div class="control_group">
+                      					<span></span>
+                      					<input class="input_span" type="text" placeholder="目的地海关编码" />
+                      				</div>
+                      				<div class="control_group">
+                      					<span></span>
+                      					<input class="input_span" type="text" placeholder="总关税(%)" />
+                      				</div>
+                      			</div>
+                      			<div class="tariff_all">总关税:￥600</div>
+                      			<div class="invoice">
+                      				<img class="invoice_img1" src="css/images/btn-radio-s@3x.png">
+                      				<input type="radio" name="invoice_need" class="invoice_radio1">
+                      				<label for="invoice_radio1" class="invoice_radio1_label">不需要发票</label>
+                      				<img class="invoice_img2" src="css/images/btn-radio-n@3x.png">
+                      				<input type="radio" name="invoice_need" class="invoice_radio2">
+                      				<label for="invoice_radio2" class="invoice_radio2_label">需要发票</label>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<a class="abtn_next btn10">立即询价</a>
+            				</div>
+                      	</div>
+    				</li>
+    				<li>
+    					<input type="radio" name="tabs" id="tab2">
+                      	<label class="tabs_label" for="tab2">FBA海运整柜</label>
+                      	<div id="tab_content2" class="tab_content">
+                      		<div class="page_before">
+                      		<div class="enquiry_title c_dark p_t2">
+                      			<span>货物信息</span>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>起运地</span>
+                      			<div class="diy_select">
+                      				<input class="input_span diy_select_input" type="text"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>目的地</span>
+                      			<input class="input_span" type="text" placeholder="FBA编码" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<div class="diy_select">
+                      				<input class="input_span diy_select_input" type="text" placeholder="城市" />
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="邮编" />
+                      		</div>
+                      		<div class="control_group_inline">
+                      			<span>货物类型</span>
+                      			<div class="group_inline_div">
+                      			<div class="diy_radio" style="margin-bottom: 0.85rem;">
+                      				<img class="product_type_img1" src="css/images/btn-radio-s@3x.png"><input type="radio" name="product_type" class="product_type1" checked="checked" /><label for="product_type1" class="diy_radio_label1" style="color:#353535;">无托散货</label><br>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<div class="diy_radio">
+                      				<img class="product_type_img2" class="diy_radio" src="css/images/btn-radio-n@3x.png"><input type="radio" name="product_type" class="product_type2"/><label for="product_type2" class="diy_radio_label2">有托盘</label>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<div class="diy_radio_tips p_t6 c_grey1"><div class="f_tips1">托盘+货物尺寸不得超过100*120*210CM，<br>重量不得超过500KG</div></div>
+                      			<div class="diy_radio_tips p_t6 c_grey1"></div>
+                      			<div class="diy_radio">
+                      				<img class="product_type_img3" class="diy_radio" src="css/images/btn-radio-n@3x.png"><input type="radio" name="product_type" class="product_type3"/><label for="product_type3" class="diy_radio_label3">超大/超重货物</label>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<div class="diy_radio_tips p_t6 c_grey1"><div class="f_tips2">平均每立方米(CBM)大于200kg</div></div>
+                      			</div>
+                      		</div>
+                      		<div class="enquiry_goods">
+                      		<div class="control_group">
+                      			<span>货物1</span>
+                      			<input class="input_span" type="text" placeholder="中文描述" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="英文描述" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="产品型号" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="箱数" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span2" type="text" placeholder="货物毛重" />
+                      			<div class="diy_select">
+                      				<input class="input_span3 diy_select_input" type="text" placeholder="KGS"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span2" type="text" placeholder="货物体积" />
+                      			<div class="diy_select">
+                      				<input class="input_span3 diy_select_input" type="text" placeholder="CBM"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="报关单价(￥)" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="PCS数" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="报关总价(￥)" />
+                      		</div>
+                      		</div>
+                      		<div class="control_group addmargin_top44">
+                      			<div id="add-goods" class="btn1 p_t2 c_dark add-goods2">+ 添加货物</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>总信息</span>
+                      			<input class="input_span2" type="text" placeholder="货物总毛重" />
+                      			<div class="diy_select">
+                      				<input class="input_span3 diy_select_input" type="text" placeholder="KG"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span2" type="text" placeholder="货物总体积" />
+                      			<div class="diy_select">
+                      				<input class="input_span3 diy_select_input" type="text" placeholder="CBM"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>所需集装箱</span>
+                      			<div class="diy_select">
+                      				<input class="input_span6 diy_select_input" type="text" placeholder="CBM"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+            				<a class="abtn_next btn10">下一步</a>
+            				</div>
+            				<div class="page_after">
+            					<div class="enquiry_title c_dark p_t2">
+                      				<span>增值服务</span>
+                      			</div>
+                      			<div class="control_group">
+                      				<div class="destination_serve_span1">起运地服务</div>
+                      				<div class="startsite_serve">
+                      					<img src="css/images/btn-multiple-s@3x.png" class="fleft startsite_serve1">
+                      					<input type="checkbox" class="site_serve1" checked="checked">
+                      					<label for="site_serve1" class="fleft site_serve1_label" style="color:#353535;">代理报关</label>
+                      					<label for="site_serve2" class="fright site_serve2_label" style="color:#353535;">代打托盘</label>
+                      					<img src="css/images/btn-multiple-s@3x.png" class="fright startsite_serve2">
+                      					<input type="checkbox" class="site_serve2" checked="checked">
+                      					<div class="cl"></div>
+                      				</div>
+                      			</div>
+                      			<div class="export_right">
+                      				<div class="export_right_div1">
+                      					<img src="css/images/btn-radio-s@3x.png" class="export_right1">
+                      					<input type="radio" class="export1" checked="checked" name="export_right_radio">
+                      					<label for="export1" class="export1_label">有出口许可权</label>
+                      					<div class="cl"></div>
+                      				</div>
+                      				<div class="export_right_div2">
+                      					<img src="css/images/btn-radio-n@3x.png" class="export_right2">
+                      					<label for="export2" class="export2_label">没有出口许可权</label>
+                      					<div class="cl"></div>
+                      					<input type="radio" class="export2" name="export_right_radio">
+                      					<span></span>
+                      				</div>
+                      			</div>
+                      			<div class="control_group">
+                      				<div class="destination_serve_span2">目的地服务</div>
+                      				<div class="destination_serve">
+                      					<img class="destination_serveimg" src="css/images/btn-multiple-s@3x.png">
+                      					<label for="destination_check" class="fleft destination_label" style="color:#353535;">代理清关</label>
+                      					<div class="cl"></div>
+                      					<input type="checkbox" class="destination_check" checked="checked">
+                      					<span></span>
+                      				</div>
+                      			</div>
+                      			<div class="enquiry_goods_goods">
+                      				<div class="control_group">
+                      					<span>货物1</span>
+                      					<input class="input_span" type="text" placeholder="英文描述" />
+                      				</div>
+                      				<div class="control_group">
+                      					<span></span>
+                      					<input class="input_span" type="text" placeholder="目的地海关编码" />
+                      				</div>
+                      				<div class="control_group">
+                      					<span></span>
+                      					<input class="input_span" type="text" placeholder="总关税(%)" />
+                      				</div>
+                      			</div>
+                      			<div class="tariff_all">总关税:￥600</div>
+                      			<div class="invoice">
+                      				<img class="invoice_img1" src="css/images/btn-radio-s@3x.png">
+                      				<input type="radio" name="invoice_need" class="invoice_radio1">
+                      				<label for="invoice_radio1" class="invoice_radio1_label">不需要发票</label>
+                      				<img class="invoice_img2" src="css/images/btn-radio-n@3x.png">
+                      				<input type="radio" name="invoice_need" class="invoice_radio2">
+                      				<label for="invoice_radio2" class="invoice_radio2_label">需要发票</label>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<a class="abtn_next btn10">立即询价</a>
+            				</div>
+                      	</div>
+    				</li>
+    				<li>
+    					<input type="radio" name="tabs" id="tab3">
+                      	<label class="tabs_label" for="tab3">FBA海运散货</label>
+                      	<div id="tab_content3" class="tab_content">
+                      		<div class="page_before">
+                      		<div class="enquiry_title c_dark p_t2">
+                      			<span>货物信息</span>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>起运地</span>
+                      			<div class="diy_select">
+                      				<input class="input_span diy_select_input" type="text"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>目的地</span>
+                      			<input class="input_span" type="text" placeholder="FBA编码" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<div class="diy_select">
+                      				<input class="input_span diy_select_input" type="text" placeholder="城市" />
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="邮编" />
+                      		</div>
+                      		<div class="control_group_inline">
+                      			<span>货物类型</span>
+                      			<div class="group_inline_div">
+                      			<div class="diy_radio2">
+                      				<img class="product_type_img1" src="css/images/btn-radio-s@3x.png"><input type="radio" name="product_type" class="product_type1" checked="checked" /><label for="product_type1" style="color:#353535;" class="diy_radio_label1">无托散货</label><br>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<div class="diy_radio_tips p_t6 c_grey1"><div class="f_tips1" style="display:block;">应亚马逊要求海运货物必须打托<br>打托尺寸100*120*210CM,我司提供代打托服务</div></div>
+                      			<div class="diy_radio2">
+                      				<img class="product_type_img2" class="diy_radio" src="css/images/btn-radio-n@3x.png"><input type="radio" name="product_type" class="product_type2"/><label for="product_type2" class="diy_radio_label2">有托盘</label>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<div class="diy_radio_tips p_t6 c_grey1"></div>
+                      			<div class="diy_radio2">
+                      				<img class="product_type_img3" class="diy_radio" src="css/images/btn-radio-n@3x.png"><input type="radio" name="product_type" class="product_type3"/><label for="product_type3" class="diy_radio_label3">超大/超重货物</label>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<div class="diy_radio_tips p_t6 c_grey1"><div class="f_tips2">平均每立方米(CBM)大于200kg</div></div>
+                      			</div>
+                      		</div>
+                      		<div class="enquiry_goods">
+                      		<div class="control_group">
+                      			<span>货物1</span>
+                      			<input class="input_span" type="text" placeholder="中文描述" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="英文描述" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="产品型号" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="箱数" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span2" type="text" placeholder="货物总毛重" />
+                      			<div class="diy_select">
+                      				<input class="input_span3 diy_select_input" type="text" placeholder="KGS"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span2" type="text" placeholder="货物总毛体积" />
+                      			<div class="diy_select">
+                      				<input class="input_span3 diy_select_input" type="text" placeholder="CBM"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="报关单价(￥)" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="PCS数" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="报关总价(￥)" />
+                      		</div>
+                      		</div>
+                      		<div class="control_group addmargin_top44">
+                      			<div id="add-goods" class="btn1 p_t2 c_dark add-goods3">+ 添加货物</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>总信息</span>
+                      			<input class="input_span2" type="text" placeholder="货物总毛重" />
+                      			<div class="diy_select">
+                      				<input class="input_span3 diy_select_input" type="text" placeholder="KG"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span2" type="text" placeholder="货物总体积" />
+                      			<div class="diy_select">
+                      				<input class="input_span3 diy_select_input" type="text" placeholder="CBM"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+            				<a class="abtn_next btn10">下一步</a>
+            				</div>
+            				<div class="page_after">
+            					<div class="enquiry_title c_dark p_t2">
+                      				<span>增值服务</span>
+                      			</div>
+                      			<div class="control_group">
+                      				<div class="destination_serve_span1">起运地服务</div>
+                      				<div class="startsite_serve">
+                      					<img src="css/images/btn-multiple-s@3x.png" class="fleft startsite_serve1">
+                      					<input type="checkbox" class="site_serve1" checked="checked">
+                      					<label for="site_serve1" class="fleft site_serve1_label" style="color:#353535;">代理报关</label>
+                      					<label for="site_serve2" class="fright site_serve2_label" style="color:#353535;">代打托盘</label>
+                      					<img src="css/images/btn-multiple-s@3x.png" class="fright startsite_serve2">
+                      					<input type="checkbox" class="site_serve2" checked="checked">
+                      					<div class="cl"></div>
+                      				</div>
+                      			</div>
+                      			<div class="export_right">
+                      				<div class="export_right_div1">
+                      					<img src="css/images/btn-radio-s@3x.png" class="export_right1">
+                      					<input type="radio" class="export1" checked="checked" name="export_right_radio">
+                      					<label for="export1" class="export1_label">有出口许可权</label>
+                      					<div class="cl"></div>
+                      				</div>
+                      				<div class="export_right_div2">
+                      					<img src="css/images/btn-radio-n@3x.png" class="export_right2">
+                      					<label for="export2" class="export2_label">没有出口许可权</label>
+                      					<div class="cl"></div>
+                      					<input type="radio" class="export2" name="export_right_radio">
+                      					<span></span>
+                      				</div>
+                      			</div>
+                      			<div class="control_group">
+                      				<div class="destination_serve_span2">目的地服务</div>
+                      				<div class="destination_serve">
+                      					<img class="destination_serveimg" src="css/images/btn-multiple-s@3x.png">
+                      					<label for="destination_check" class="fleft destination_label" style="color:#353535;">代理清关</label>
+                      					<div class="cl"></div>
+                      					<input type="checkbox" class="destination_check" checked="checked">
+                      					<span></span>
+                      				</div>
+                      			</div>
+                      			<div class="enquiry_goods_goods">
+                      				<div class="control_group">
+                      					<span>货物1</span>
+                      					<input class="input_span" type="text" placeholder="英文描述" />
+                      				</div>
+                      				<div class="control_group">
+                      					<span></span>
+                      					<input class="input_span" type="text" placeholder="目的地海关编码" />
+                      				</div>
+                      				<div class="control_group">
+                      					<span></span>
+                      					<input class="input_span" type="text" placeholder="总关税(%)" />
+                      				</div>
+                      			</div>
+                      			<div class="tariff_all">总关税:￥600</div>
+                      			<div class="invoice">
+                      				<img class="invoice_img1" src="css/images/btn-radio-s@3x.png">
+                      				<input type="radio" name="invoice_need" class="invoice_radio1">
+                      				<label for="invoice_radio1" class="invoice_radio1_label">不需要发票</label>
+                      				<img class="invoice_img2" src="css/images/btn-radio-n@3x.png">
+                      				<input type="radio" name="invoice_need" class="invoice_radio2">
+                      				<label for="invoice_radio2" class="invoice_radio2_label">需要发票</label>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<a class="abtn_next btn10">立即询价</a>
+            				</div>
+                      	</div>
+    				</li>
+    				<li>
+    					<input type="radio" name="tabs" id="tab4">
+                      	<label class="tabs_label" for="tab4">FBA快递</label>
+                      	<div id="tab_content4" class="tab_content">
+                      		<div class="page_before">
+                      		<div class="enquiry_title c_dark p_t2">
+                      			<span>货物信息</span>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>物流公司</span>
+                      			<div class="diy_select">
+                      				<input class="input_span5 diy_select_input" type="text"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>目的地国</span>
+                      			<div class="diy_select">
+                      				<input class="input_span5 diy_select_input" type="text"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="enquiry_goods">
+                      		<div class="control_group">
+                      			<span>货物1</span>
+                      			<input class="input_span" type="text" placeholder="长(cm)" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="宽(cm)" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="高(cm)" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="重量(kg)" />
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span" type="text" placeholder="件数" />
+                      		</div>
+                      		</div>
+                      		<div class="control_group addmargin_top44">
+                      			<div id="add-goods-express" class="btn1 p_t2 c_dark">+ 添加货物</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span>总信息</span>
+                      			<input class="input_span2" type="text" placeholder="货物总毛重" />
+                      			<div class="diy_select">
+                      				<input class="input_span3 diy_select_input" type="text" placeholder="KG"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+                      		<div class="control_group">
+                      			<span></span>
+                      			<input class="input_span2" type="text" placeholder="货物总毛体积" />
+                      			<div class="diy_select">
+                      				<input class="input_span3 diy_select_input" type="text" placeholder="CBM"/>
+                      				<img class="diy_select_icon" src="css/images/btn-pulldown@3x.png">
+                      				<div class="diy_select_hiden">
+                      					<ul>
+                      						<li>1</li>
+                      						<li>2</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      						<li>3</li>
+                      						<li>4</li>
+                      					</ul>
+                      				</div>
+                      			</div>
+                      		</div>
+            				<a class="abtn_next btn10">下一步</a>
+            				</div>
+            				<div class="page_after">
+            					<div class="enquiry_title c_dark p_t2">
+                      				<span>增值服务</span>
+                      			</div>
+                      			<div class="control_group">
+                      				<div class="destination_serve_span1">起运地服务</div>
+                      				<div class="startsite_serve">
+                      					<img src="css/images/btn-multiple-s@3x.png" class="fleft startsite_serve1">
+                      					<input type="checkbox" class="site_serve1" checked="checked">
+                      					<label for="site_serve1" class="fleft site_serve1_label" style="color:#353535;">闪电侠上门取件(仅限杭州)</label>
+                      					<div class="cl"></div>
+                      					<div>
+                      						<img src="css/images/btn-multiple-s@3x.png" class="fleft startsite_serve2">
+                      						<label for="site_serve2" class="fleft site_serve2_label" style="color:#353535;">送至闪电侠仓库</label>
+                      						<input type="checkbox" class="site_serve2" checked="checked">
+                      						<div class="cl"></div>
+                      					</div>
+                      				</div>
+                      			</div>
+                      			<div class="control_group">
+                      				<span></span>
+                      				<input class="input_span" type="text" placeholder="货物所在地，请具体到街道及门牌号" />
+                      			</div>
+                      			<div class="control_group">
+                      				<span></span>
+                      				<input class="input_span" type="text" placeholder="联系人姓名" />
+                      			</div>
+                      			<div class="control_group">
+                      				<span></span>
+                      				<input class="input_span" type="text" placeholder="联系人电话" />
+                      			</div>
+                      			<div class="control_group relative">
+                      				<span></span>
+                      				<input class="input_span calendar_date" data-field="date" type="text" placeholder="日期选择" />
+                      				<a class="calendar_img"><img src="css/images/icon-date@3x.png"></a>
+                      				<div id="dtBox"></div>
+                      			</div>
+                      			<div class="control_group">
+                      				<div class="destination_serve_span2">目的地服务</div>
+                      				<div class="destination_serve c_grey1 p_t3">
+                      					如产生关税，以Fedex、UPS、DHL、TNT等实际账单为主
+                      				</div>
+                      			</div>
+                      			<div class="tariff_all"></div>
+                      			<div class="invoice">
+                      				<img class="invoice_img1" src="css/images/btn-radio-s@3x.png">
+                      				<input type="radio" name="invoice_need" class="invoice_radio1">
+                      				<label for="invoice_radio1" class="invoice_radio1_label">不需要发票</label>
+                      				<img class="invoice_img2" src="css/images/btn-radio-n@3x.png">
+                      				<input type="radio" name="invoice_need" class="invoice_radio2">
+                      				<label for="invoice_radio2" class="invoice_radio2_label">需要发票</label>
+                      				<div class="cl"></div>
+                      			</div>
+                      			<a class="abtn_next btn10">立即询价</a>
+            				</div>
+                      	</div>
+    				</li>
+    			</ul>
+    			<div class="cl"></div>
+    		</div>
+    	</section>
+		<script type="text/javascript">
+			$("#dtBox").DateTimePicker(
+				{
+					dateFormat: "yyyy-MM-dd"
+				});
+		</script>
+	</body>
+</html>

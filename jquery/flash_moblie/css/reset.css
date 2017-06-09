@@ -1,0 +1,134 @@
+/* CSS reset */
+html{background:#fff;font-size:10px;margin:0;padding:0;}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td,section{margin:0;padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img { border:0;}
+body{font-family: 'Microsoft Yahei';} 
+address,caption,cite,code,dfn,th,var {font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:1rem;font-weight:normal;}
+q:before,q:after {content:'';}
+abbr,acronym { border:0;}
+a{text-decoration:none;color:#000;}
+input{border: 1px solid #CCCCCC;-webkit-appearance: none;-moz-appearance: none;}
+strong{font-weight:400;}
+*{outline: none;}
+/*NORMAL CSS*/
+
+/*字体颜色*/
+.c_red{color:#ec4c3a;}
+.c_dark{color:#353535;}
+.c_grey1{color:#737373;}
+.c_grey2{color:#B1B1B1;}
+.c_grey3{color:#F5F5F5;}
+.c_white{color:#FFFFFF;}
+
+/*字体大小*/
+.p_t1{font-size:0.43rem;} /*36px*/
+.p_t2{font-size:0.4rem;} /*30px*/
+.p_t3{font-size:0.37rem;} /*28px*/
+.p_t4{font-size:0.35rem;} /*26px*/
+.p_t5{font-size:0.32rem;} /*24px*/
+.p_t6{font-size:0.29rem;} /*22px*/
+
+/*加粗*/
+.p_blod{font-weight:bold;}
+.p_weight1{font-weight:400;}
+.p_weight2{font-weight:500;}
+
+/*button 样式*/
+.btn1{width:2.56rem;height:0.75rem;line-height:0.75rem;text-align:center;border-radius:0.13rem;border:1px solid #353535;font-size:0.4rem;}
+.btn2{width:1.87rem;height:0.75rem;line-height:0.75rem;text-align:center;border-radius:0.13rem;background:#ec4c3a;font-size:0.4rem;color:#fff;}
+.btn3{width:1.6rem;height:0.75rem;line-height:0.75rem;text-align:center;border-radius:0.13rem;border:1px solid #ec4c3a;font-size:0.29rem;}
+.btn4{width:1.6rem;height:0.64rem;line-height:0.64rem;text-align:center;border-radius:0.13rem;border:1px solid #ec4c3a;font-size:0.29rem;}
+.btn5{width:2.13rem;height:0.75rem;line-height:0.75rem;text-align:center;border-radius:0.13rem;border:1px solid #ec4c3a;font-size:0.4rem;color:#ec4c3a;}
+.btn6{width:2.13rem;height:0.75rem;line-height:0.75rem;text-align:center;border-radius:0.13rem;background:#ec4c3a;font-size:0.4rem;color:#fff;}
+.btn7{width:2.13rem;height:0.75rem;line-height:0.75rem;text-align:center;border-radius:0.13rem;border:1px solid #ec4c3a;font-size:0.4rem;color:#ec4c3a;}
+.btn8{width:2.13rem;height:0.75rem;line-height:0.75rem;text-align:center;border-radius:0.13rem;background:#737373;font-size:0.4rem;color:#fff;}
+.btn9{width:4.27rem;height:1.07rem;line-height:1.07rem;text-align:center;border-radius:0.13rem;border:3px solid #ec4c3a;font-size:0.4rem;color:#ec4c3a;}
+.btn10{width:8.4rem;height:1.6rem;line-height:1.6rem;text-align:center;border-radius:0.13rem;border:3px solid #ec4c3a;font-size:0.48rem;color:#ec4c3a;}
+
+/*lines 样式*/
+.line1{width:100%;height:1px;background:#F5F5F5}
+.line2{width:100%;height:1px;background:#B1B1B1}
+.line3{width:100%;height:3px;background:#737373}
+.line4{width:100%;height:1px;background:#ec4c3a}
+
+
+/*input 下边样式*/
+input[type='text']{border:none;border-bottom:1px solid #b1b1b1;outline:none;}
+input[type='date']{border:none;border-bottom:1px solid #b1b1b1;outline:none;}
+input[type='password']{border: none;border-bottom: 1px  solid #B1B1B1;outline:none;}
+/*清楚浮动*/
+.cl{clear: both;}
+
+
+/*h5 标签*/
+header{
+  height:1.17rem;
+  width:100%;
+}
+section{
+  width: 100%;
+}
+footer{
+  width: 100%;
+}
+
+/*页面调整样式*/
+.abtn{
+  display: block;
+  float: left;
+}
+.addmargin_top44{
+  margin-top: 0.5rem;
+}
+.beinline_block{
+  display: inline-block;
+}
+
+
+
+/*dongdong style*/
+/**头部返回按钮+标题通用样式**/
+.header{
+    height: 1.17rem;
+    width: 100%;
+    background: #ffffff;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid #f5f5f5;
+}
+.style_header_return{
+    width: 0.56rem;
+    height: 0.56rem;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.28rem;
+    left: 0.32rem;
+}
+.header h1{
+    display: inline-block;
+    text-align: center;
+    font-size: 0.48rem;
+    color: #353535;
+    height: 1.17rem;
+    line-height: 1.17rem;
+    width: 4rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -2rem;
+}
+
+
+@media screen and (max-width: 320px){
+  .bspace_tab_li{
+    margin-left: 0 !important;
+  }
+  .tab_content{
+    top:1.25rem !important;
+  }
+}

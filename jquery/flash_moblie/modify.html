@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闪电侠修改密码</title>
+    <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,width=device-width">
+    <script type="text/javascript">
+        document.getElementsByTagName('html')[0].style.fontSize = (window.screen.width)/10 + 'px';
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/normal.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery-1.12.3.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="javascript:;"><img src="css/images/icon-return@3x.png" alt="" class="style_header_return" id="modify_return"/></a>
+        <h1>密码修改</h1>
+    </header>
+    <div class="style_header_separate"></div>
+    <section id="modify_title" class="style_title">
+        修改密码
+    </section>
+    <section id="modify_info">
+        <div id="modify_presecret" class="style_si">
+            <span>原密码</span><!--用于去除inline-block元素之间的空隙
+            --><input type="password" id="modify_presecret_text" placeholder="原6-20位密码" style="background: #fff;"/>
+        </div>
+        <div id="modify_newsecret" class="style_si">
+            <span>新密码</span><!--用于去除inline-block元素之间的空隙
+            --><input type="password" id="modify_newsecret_text" placeholder="6-20位由数字和字母组成" style="background: #fff;"/>
+        </div>
+        <div id="modify_renewsecret" class="style_si">
+            <span>再次输入</span><!--用于去除inline-block元素之间的空隙
+            --><input type="password" id="modify_renewsecret_text" placeholder="再次输入密码" style="background: #fff;"/>
+        </div>
+    </section>
+    <input type="button" value="保存" id="modify_btn" class="style_loginbtn" style="background: #fff"/>
+</body>
+</html>
