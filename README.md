@@ -1,5 +1,5 @@
 ## 列表
-记录一些自己在学习前端的时候写的小demo
+记录一些自己在学习JS时候写的小demo
 ### html&css
 * [表单(正则)](http://jiangxd18.github.io/web/htmlcss/form/form.html)
 * [模糊查询](http://jiangxd18.github.io/web/htmlcss/table/table.html)
